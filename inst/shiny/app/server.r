@@ -943,18 +943,17 @@ shinyServer(function(input,output,session){
                 aux_que4 <- aux_que3[aux_siglas1]
                 que <- unlist(sapply(aux_que4, function(x) eval(parse(text=x))))
 
-                	{
-		 if(require(devtools)){
-                  devtools::install_github("haven-jeon/Ruchardet")
- 		  }else{
- 		   install.packages('devtools')
-                   devtools::install_github("haven-jeon/Ruchardet")
-		   }} 
+		#                  if(require(devtools)){
+		#                    install.packages("haven-jeon/Ruchardet")
+		#                    }else{
+		#                     install.packages('devtools')
+		#                    devtools::install_github("haven-jeon/Ruchardet")
+		#                    } 
 		   
                 enc <- sapply(que,
-                              function(x) suppressWarnings(Ruchardet::detectFileEncoding(x)))
+                              function(x) readr::guess_encoding(x,n_max=1000)$encoding[1])
 
-                ifelse(enc == "native.enc", enc <- "", enc) 
+                #ifelse(enc == "native.enc", enc <- "", enc) 
                 conv <- mapply(function(x,y) {
                                  aux1 <- iconv(readLines(x),
                                                from=y,

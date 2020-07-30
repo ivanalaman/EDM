@@ -9,5 +9,5 @@ importFrom("shiny","navbarPage")#gambiarra
 importFrom("shinyjs","useShinyjs")
 importFrom("shinyjs","toggleState")
 importFrom("shinyjs","info")
-importFrom("Ruchardet","detectFileEncoding")
+importFrom("readr","guess_encoding")
 importFrom("markdown","markdownToHTML")
