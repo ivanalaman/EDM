@@ -966,7 +966,7 @@ shinyServer(function(input,output,session){
                               },
                               que,
                               enc)													
-                que
+                as.vector(que)
               })
 
               #             +++++++++++ Gerando os arquivos ++++++++++++++ #
@@ -1068,6 +1068,6 @@ shinyServer(function(input,output,session){
               })
 
               ## Debugin app!!
-              #output$test <- renderText({ questions() })#é um character!!
+              #output$test <- renderText({ dim(questions())})#é um character!!
               #output$coco <- renderText({subsubdirs()})  
 })

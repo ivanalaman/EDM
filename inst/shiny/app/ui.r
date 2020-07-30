@@ -168,6 +168,7 @@ shinyUI(navbarPage(theme = "bootstrap.css",
                                                                                       uiOutput("gdatb")))
                                                                ), 
                                                       tabPanel(uiOutput("tutorial"),
+                                                               #verbatimTextOutput('test'),
                                                                uiOutput("up_guide"))
-                                                               #verbatimTextOutput('test') )
+                                                               
                                                       )) 
