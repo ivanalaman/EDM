@@ -1,0 +1,11 @@
+\begin{question}
+Is this a file empty?
+\begin{answerlist}
+  \item Yes
+  \item No
+\end{answerlist}
+\end{question}
+
+\extype{schoice}
+\exsolution{01000}
+\exshuffle{TRUE}
