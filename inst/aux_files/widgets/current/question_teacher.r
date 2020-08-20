@@ -2,6 +2,7 @@
 dad_acz <- reactive({
 
  aa <- list.files('../../questionbank/austria/ACZ',
+		  pattern='*.Rnw',
                   recursive=T,
                   full.names=T)
  aux_1 <- list.files('../../questionbank/austria/ACZ',

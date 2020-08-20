@@ -935,7 +935,6 @@ shinyServer(function(input,output,session){
                 siglas   <- tolower(list.dirss(aux_que))
                 aux_siglas <- paste('input$checkquestion',siglas,sep='')
                 aux_siglas1 <- sapply(aux_siglas, function(x) eval(parse(text=x)))
-                aux_siglas1 
                 aux_siglas2 <- paste('input$questions_',siglas,'_rows_selected',sep='')
                 aux_siglas22 <- sapply(aux_siglas2, function(x) eval(parse(text=x)),simplify=FALSE)
 
