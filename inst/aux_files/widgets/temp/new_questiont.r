@@ -6,6 +6,7 @@ dad_obl <- reactive({
                   recursive=T,
                   full.names=T)
  aux_1 <- list.files('../../questionbank/afghanistan/OBL',
+                     pattern='*.Rnw',
                      recursive=T)
  b <- strsplit(aux_1,
                '\\/')
