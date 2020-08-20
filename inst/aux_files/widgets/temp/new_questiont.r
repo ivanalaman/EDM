@@ -2,6 +2,7 @@
 dad_obl <- reactive({
 
  aa <- list.files('../../questionbank/afghanistan/OBL',
+                  pattern='*.Rnw',
                   recursive=T,
                   full.names=T)
  aux_1 <- list.files('../../questionbank/afghanistan/OBL',
