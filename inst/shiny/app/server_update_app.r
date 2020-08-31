@@ -38,7 +38,9 @@ versionnew <- reactive({
 
 observeEvent(input$ok, {
  #Agora começa-se o procedimento de atualização
- #dirnow <- getwd()
+ pathlibraries <- .libPaths()
+ setwd(pathlibraries)#Este comando foi necessário, pois ao atualizar o app removendo o pacote, o diretório fica inexistente, gerando um erro do tiop getwcd() failed: No such file or directory. 
+
  #filetemp <- tempfile()
  #download.file(url = "https://github.com/ivanalaman/EDM/archive/master.zip",destfile = filetemp)
  #unzip(filetemp,exdir=tempdir())
