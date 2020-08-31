@@ -21,16 +21,16 @@ versionnew <- reactive({
   #Dispara um pop-up
   showModal(modalDialog(
     title = "",
-    "Versão atualizada!"))
+    uiOutput("mversaoatu")))
  }else{
   #Dispara um pop-up dizendo a versão atual e a versão disponível e perguntando se gostaria de atualizar a atual versão
 
   showModal(modalDialog(
    title = "",
-   "Sua versão está desatualizada!Você gostaria de atualizar a versão atual?",
+   uiOutput("matualiapp"),
    footer = tagList(
-    modalButton("Não"),
-    actionButton("ok","Sim")
+    modalButton(uiOutput("bnao")),
+    actionButton("ok",uiOutput("bsim"))
    )
   ))
  }
@@ -45,17 +45,17 @@ observeEvent(input$ok, {
  #unlink(paste0(tempdir(),"/EDM-master/inst/questionbank"),recursive=TRUE)
 
  pathEDM <- find.package("EDM")#encontrando o diretório do EDM
- pathqbank <- paste0(pathEDM,"/questionbank")#fazendo o caminho do banco de questões
+ #pathqbank <- paste0(pathEDM,"/questionbank")#fazendo o caminho do banco de questões
  copysecure <- file.copy(from=pathqbank,to=tempdir(),recursive=TRUE)#copiando o banco de questões do usuário para um local seguro
 
  remove.packages("EDM") #removendo o pacote EDM desatualizado!
  devtools::install_github("ivanalaman/EDM") #instalando nova versão!
- file.copy(from=paste0(tempdir(),"/questionbank"),to=pathqbank,recursive=TRUE)#copiando o banco de questões do usuário de volta para o pacote
+ file.copy(from=paste0(tempdir(),"/questionbank"),to=pathEDM,recursive=TRUE)#copiando o banco de questões do usuário de volta para o pacote
 
  stopApp()
  showModal(modalDialog(
-   title = "Important message",
-   "Restart your application!",
+   title = "",
+   uiOutput("mreiniciar2"),
    footer = modalButton("OK!"),
    size='m'))
 })

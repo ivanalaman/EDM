@@ -269,8 +269,8 @@ observeEvent(input$atubanco,{
 
  stopApp()
  showModal(modalDialog(
-   title = "Important message",
-   "Restart your application!",
+   title = "",
+   uiOutput("mreiniciar"),
    footer = modalButton("OK!"),
    size='m'))
 

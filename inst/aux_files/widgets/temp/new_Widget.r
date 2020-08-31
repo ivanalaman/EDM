@@ -1,9 +1,9 @@
 ,
-#++++++++++++++++++++++++++++++++++++++++++++++++        Osama Bin Laden         ++++++++++++++++++++++++++++++++++++++++
-checkboxInput('checkquestionobl', 
-              label='Osama Bin Laden',
+#++++++++++++++++++++++++++++++++++++++++++++++++        Ivan Bezerra Allaman         ++++++++++++++++++++++++++++++++++++++++
+checkboxInput('checkquestioniba', 
+              label='Ivan Bezerra Allaman',
               value = FALSE),
 conditionalPanel(
-                 condition = 'input.checkquestionobl',
-                 DT::dataTableOutput('questions_obl')
+                 condition = 'input.checkquestioniba',
+                 DT::dataTableOutput('questions_iba')
                  )
