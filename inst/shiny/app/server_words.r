@@ -107,4 +107,4 @@ output$bsim          <- renderText({ tr("bsim")         })
 output$bnao          <- renderText({ tr("bnao")         })
 output$mreiniciar    <- renderText({ tr("mreiniciar")   })
 output$mreiniciar2   <- renderText({ tr("mreiniciar")   })
-
+output$matualiapp    <- renderText({ tr("matualiapp")   }) 

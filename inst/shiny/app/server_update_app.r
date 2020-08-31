@@ -45,7 +45,7 @@ observeEvent(input$ok, {
  #unlink(paste0(tempdir(),"/EDM-master/inst/questionbank"),recursive=TRUE)
 
  pathEDM <- find.package("EDM")#encontrando o diretório do EDM
- #pathqbank <- paste0(pathEDM,"/questionbank")#fazendo o caminho do banco de questões
+ pathqbank <- paste0(pathEDM,"/questionbank")#fazendo o caminho do banco de questões
  copysecure <- file.copy(from=pathqbank,to=tempdir(),recursive=TRUE)#copiando o banco de questões do usuário para um local seguro
 
  remove.packages("EDM") #removendo o pacote EDM desatualizado!
