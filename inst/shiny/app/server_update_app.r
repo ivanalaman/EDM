@@ -2,7 +2,7 @@
 
 observeEvent(input$upp_app,{
 
- versionnew <- reactive({
+versionnew <- reactive({
   repos <- readLines("https://github.com/ivanalaman/EDM/blob/master/DESCRIPTION")
   posver <- grep("Version",repos)
   versionsujo <- repos[posver]
@@ -25,14 +25,14 @@ observeEvent(input$upp_app,{
  }else{
   #Dispara um pop-up dizendo a versão atual e a versão disponível e perguntando se gostaria de atualizar a atual versão
 
-  modalDialog(
+  showModal(modalDialog(
    title = "",
    "Sua versão está desatualizada!Você gostaria de atualizar a versão atual?",
    footer = tagList(
     modalButton("Não"),
     actionButton("ok","Sim")
    )
-  )
+  ))
  }
 })
 

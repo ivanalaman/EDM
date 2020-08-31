@@ -54,6 +54,10 @@ shinyServer(function(input,output,session){
 
  source("server_generating_files.r",local = TRUE)$value 
  
+ #+++++++++++++                    Update App                  +++++++++++++++#
+
+ source("server_update_app.r",local=TRUE)$value
+
  #+++++++++++++             Translate update question bank file!              +++++++++++++++#
 
  output$up_file <- renderUI({
@@ -89,10 +93,6 @@ shinyServer(function(input,output,session){
   Encoding(html) <- 'UTF-8'
   return(HTML(html))
  })
-
- #+++++++++++++                    Update App                  +++++++++++++++#
-
- source("server_update_app.r",local=TRUE)$value
 
  session$onSessionEnded(function() {
   stopApp()
