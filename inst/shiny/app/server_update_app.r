@@ -51,14 +51,14 @@ observeEvent(input$ok, {
 
   pathEDM <- find.package("EDM")#encontrando o diretório do EDM
   pathqbank <- paste0(pathEDM,"/questionbank")#fazendo o caminho do banco de questões
-  pathwidgets <- paste0(pathEDM,"/aux_files/widgets")#fazendo o caminho para os widgets com o intuito de garantir que o banco de questões do usuário seja reconhecido após a atualização
+  pathwidgets <- paste0(pathEDM,"/aux_files")#fazendo o caminho para os widgets com o intuito de garantir que o banco de questões do usuário seja reconhecido após a atualização
   copysecure <- file.copy(from=pathqbank,to=tempdir(),recursive=TRUE)#copiando o banco de questões do usuário para um local seguro
   copysecurewid <- file.copy(from=pathwidgets,to=tempdir(),recursive=TRUE)#copiando o widgets antigo do usuário para um local seguro 
 
   remove.packages("EDM") #removendo o pacote EDM desatualizado!
   devtools::install_github("ivanalaman/EDM") #instalando nova versão!
   file.copy(from=paste0(tempdir(),"/questionbank"),to=pathEDM,recursive=TRUE)#copiando o banco de questões do usuário de volta para o pacote
-  file.copy(from=paste0(tempdir(),"/aux_files"),to=pathEDM,recursive=TRUE)#copiando o widgets do usuário de volta para o pacote
+  file.copy(from=paste0(tempdir(),"/aux_files/widgets"),to=pathEDM,recursive=TRUE)#copiando o widgets do usuário de volta para o pacote
 
   stopApp()
   showModal(modalDialog(
