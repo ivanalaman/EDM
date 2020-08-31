@@ -63,6 +63,7 @@ observeEvent(input$ok, {
   devtools::install_github("ivanalaman/EDM") #instalando nova versão!
   file.copy(from=paste0(tempdir(),"/questionbank"),to=pathEDM,recursive=TRUE)#copiando o banco de questões do usuário de volta para o pacote
   file.copy(from=paste0(tempdir(),"/aux_files/widgets"),to=paste0(pathEDM,"/aux_files"),recursive=TRUE)#copiando o widgets do usuário de volta para o pacote
+  file.copy(from=paste0(tempdir(),"/aux_files/widgets/.who.txt"),to=paste0(pathEDM,"/aux_files"),recursive=TRUE)#copiando o arquivo que grava a informação o último banco de dados que foi criado  pelo usuário
 
   stopApp()
   showModal(modalDialog(
