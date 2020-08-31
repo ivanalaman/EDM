@@ -21,7 +21,11 @@ observeEvent(input$upp_app,{
   #Dispara um pop-up
   showModal(modalDialog(
     title = "",
-    uiOutput("mversaoatu")))
+    uiOutput("mversaoatu"),
+    footer = tagList(
+     modalButton("Ok!")
+    )
+    ))
  }else{
   #Dispara um pop-up dizendo a versão atual e a versão disponível e perguntando se gostaria de atualizar a atual versão
 
@@ -58,7 +62,7 @@ observeEvent(input$ok, {
   remove.packages("EDM") #removendo o pacote EDM desatualizado!
   devtools::install_github("ivanalaman/EDM") #instalando nova versão!
   file.copy(from=paste0(tempdir(),"/questionbank"),to=pathEDM,recursive=TRUE)#copiando o banco de questões do usuário de volta para o pacote
-  file.copy(from=paste0(tempdir(),"/aux_files/widgets"),to=pathEDM,recursive=TRUE)#copiando o widgets do usuário de volta para o pacote
+  file.copy(from=paste0(tempdir(),"/aux_files/widgets"),to=paste0(pathEDM,"/aux_files"),recursive=TRUE)#copiando o widgets do usuário de volta para o pacote
 
   stopApp()
   showModal(modalDialog(
