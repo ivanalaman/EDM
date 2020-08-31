@@ -33,24 +33,30 @@ observeEvent(input$upp_app,{
     actionButton("ok","Sim")
    )
   )
-
-  observeEvent(input$ok, {
-   #Agora começa-se o procedimento de atualização
-   #dirnow <- getwd()
-   #filetemp <- tempfile()
-   #download.file(url = "https://github.com/ivanalaman/EDM/archive/master.zip",destfile = filetemp)
-   #unzip(filetemp,exdir=tempdir())
-   #unlink(paste0(tempdir(),"/EDM-master/inst/questionbank"),recursive=TRUE)
-
-   pathEDM <- find.package("EDM")#encontrando o diretório do EDM
-   pathqbank <- paste0(pathEDM,"/questionbank")#fazendo o caminho do banco de questões
-   copysecure <- file.copy(from=pathqbank,to=tempdir(),recursive=TRUE)#copiando o banco de questões do usuário para um local seguro
-
-   remove.packages("EDM") #removendo o pacote EDM desatualizado!
-   devtools::install_github("ivanalaman/EDM") #instalando nova versão!
-   file.copy(from=paste0(tempdir(),"/questionbank"),to=pathqbank,recursive=TRUE)#copiando o banco de questões do usuário de volta para o pacote
-
-  })
  }
+})
+
+observeEvent(input$ok, {
+ #Agora começa-se o procedimento de atualização
+ #dirnow <- getwd()
+ #filetemp <- tempfile()
+ #download.file(url = "https://github.com/ivanalaman/EDM/archive/master.zip",destfile = filetemp)
+ #unzip(filetemp,exdir=tempdir())
+ #unlink(paste0(tempdir(),"/EDM-master/inst/questionbank"),recursive=TRUE)
+
+ pathEDM <- find.package("EDM")#encontrando o diretório do EDM
+ pathqbank <- paste0(pathEDM,"/questionbank")#fazendo o caminho do banco de questões
+ copysecure <- file.copy(from=pathqbank,to=tempdir(),recursive=TRUE)#copiando o banco de questões do usuário para um local seguro
+
+ remove.packages("EDM") #removendo o pacote EDM desatualizado!
+ devtools::install_github("ivanalaman/EDM") #instalando nova versão!
+ file.copy(from=paste0(tempdir(),"/questionbank"),to=pathqbank,recursive=TRUE)#copiando o banco de questões do usuário de volta para o pacote
+
+ stopApp()
+ showModal(modalDialog(
+   title = "Important message",
+   "Restart your application!",
+   footer = modalButton("OK!"),
+   size='m'))
 })
 
