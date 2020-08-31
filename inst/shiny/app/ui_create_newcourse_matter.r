@@ -1,0 +1,16 @@
+tabPanel(
+ uiOutput("criardisc"),
+ column(4,
+  wellPanel(
+   uiOutput('discip1'),
+   uiOutput('discip2')
+   ),
+  actionButton("gerard",
+   uiOutput("gdisc"))
+  ),
+ column(5,
+  uiOutput('assunt'),
+  actionButton("gerara",
+   uiOutput("gassu")) 
+ )
+)
