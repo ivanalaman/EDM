@@ -99,6 +99,6 @@ shinyServer(function(input,output,session){
  })
 
  ## Debugin app!!
- #output$test <- renderText({ dim(questions())})#é um character!!
+ #output$teste <- renderText({ str(tr("bsim")) })#é um character!!
  #output$coco <- renderText({subsubdirs()})  
 })

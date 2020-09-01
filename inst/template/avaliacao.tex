@@ -2,7 +2,7 @@
 %\documentclass[10pt, a4paper]{article}
 \usepackage[utf8]{inputenc}
 \usepackage[brazilian]{babel}
-\usepackage{a4wide,color,verbatim,Sweave,url,xargs}
+\usepackage{a4wide,color,verbatim,url,xargs,fancyvrb,graphicx}
 \usepackage{fancyhdr}
 \usepackage{float}
 \usepackage{amsthm}       
@@ -67,20 +67,25 @@
 \newcommand{\myDate}{\@Date}
 \makeatother
 
+\DefineVerbatimEnvironment{Sinput}{Verbatim}{fontshape=sl}
+\DefineVerbatimEnvironment{Soutput}{Verbatim}{}
+\DefineVerbatimEnvironment{Scode}{Verbatim}{fontshape=sl}
+\newenvironment{Schunk}{}{}
+
 \begin{document}
 %+++++++++++++++++++++++++++++                           CABEÇALHO                        +++++++++++++++++++++++++++++++++++++++++%
 \pagestyle{fancy} 	
 \fancyhead[L]{\textbf{\normalsize \input{aval}}} % Clear all header fields 
 \fancyhead[R]{\myID}
 %\fancyhead[L,R]{\includegraphics[height=50pt]{./uesclogo}}
-\fancyfoot[R]{\textbf{``Todas as grandes coisas são simples. E muitas podem ser expressas numa só palavra: liberdade; justiça; honra; dever; piedade; esperança''} - \textit{Winston Churchill}}
+\fancyfoot[R]{\textbf{``Todas as grandes coisas s{\~a}o simples. E muitas podem ser expressas numa s{\'o} palavra: liberdade; justi{\c c}a; honra; dever; piedade; esperan{\c c}a''} - \textit{Winston Churchill}}
 \cfoot{}
 %++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++%
 
 \section*{}
-\textbf{Unidade Acadêmica:} \input{unid}\\
+\textbf{Unidade Acad{\^e}mica:} \input{unid}\\
 \textbf{Classe:} \input{disc}\\
-\textbf{Carga Horária:}\input{carg} \textbf{Período Letivo:} \input{anol}\\
+\textbf{Carga Hor{\'a}ria:}\input{carg} \textbf{Per{\'i}odo Letivo:} \input{anol}\\
 \textbf{Professor:} \input{nome}\\
 \textbf{Data:\myDate}  \\
 \textbf{Aluno(a):} \hspace{12cm} \textbf{NOTA:}\_\_\_\_\_\_\_\_\_\_\_\_\ \\
@@ -88,7 +93,7 @@
 
 \vspace{0.3cm}
 
-\textbf{Recomendações: Leia atentamente todas as questões antes de respondê-las. Começe respondendo as questões mais fáceis. Não utilize meios ilícitos para responder as questões pois o único prejudicado será você mesmo. Boa prova!!!}\vspace{0.5cm}
+\textbf{Recomenda{\c c}{\~o}es: Leia atentamente todas as quest{\~o}es antes de respond{\^e}-las. Come{\c c}e respondendo as quest{\~o}es mais f{\'a}ceis. N{\~a}o utilize meios il{\'i}citos para responder as quest{\~o}es pois o {\'u}nico prejudicado ser{\'a} voc{\^e}. Boa prova!!!}\vspace{0.5cm}
 
 \vspace*{1cm}
 

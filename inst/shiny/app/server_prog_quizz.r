@@ -1,13 +1,9 @@
 #++++++++++++++ Questão do tipo dissertativa texto +++++++++++++++#
 
 bsimm <- reactive({
- if(input$language == "br"){
-  res <- list("Sim" = 1, "Não" = 2)
-  res
- }else{
-  res <- list("Yes" = 1, "Not" = 2)
-  res
- }
+    res <- list('sim' = 1, 'nao' = 2)
+    names(res) <- c(tr('bsim'),tr('bnao'))
+    res
 })
 
 output$textAtextoUI <- renderUI({
@@ -547,11 +543,11 @@ captureqmesc <- reactive({
     if(nc > 2){
      meiocondi <- NULL
      for(i in 1:nc){
-      meiocondi[i] <- paste0("\n\\item ",input[[paste0("condi",i)]])
+      meiocondi[i] <- paste0("\n\\item[",i,".]",input[[paste0("condi",i)]])
      }
      meiocondi <- paste0(meiocondi,collapse="")
     }else{
-     meiocondi <- paste0("\n\\item ",input$condi1,"\n\\item ",input$condi2)
+     meiocondi <- paste0("\n\\item[1.] ",input$condi1,"\n\\item[2.] ",input$condi2)
     }
 
     if(n > 2){
@@ -584,9 +580,9 @@ captureqmesc <- reactive({
      }else{
       meioques <- paste0('\n\n\\begin{question}\n',
        input$titlequestionass, 
-       '\n\n\\begin{enumerate}\n',
+       '\n\n\\begin{itemize}\n',
        meiocondi,
-       '\n\\end{enumerate}
+       '\n\\end{itemize}
        \n\n\\begin{answerlist}')
      } 
 
@@ -599,7 +595,7 @@ captureqmesc <- reactive({
      meioanssol <- paste0(paste0('\n\\item \\Sexpr{solutions[',1:n,']}'),collapse='')
 
      fim1 <- '\n\\end{answerlist}\n\\end{solution}
-     \n\n%% META-INFORMATION\n%% \\extype{cloze}\n%% \\exsolution{\\Sexpr{paste(solutions,collaps"|")}}\n'
+     \n\n%% META-INFORMATION\n%% \\extype{cloze}\n%% \\exsolution{\\Sexpr{paste(solutions,collapse="|")}}\n'
 
      fim2 <- paste0('%% \\exclozetype{',paste(rep('num',n),collapse="|"),'}')
 
@@ -634,9 +630,9 @@ captureqmesc <- reactive({
      latex <- paste0('\n\n\\begin{question}\n',
       input$titlequestionass,
       meio,
-      '\n\n\\begin{enumerate}',
+      '\n\n\\begin{itemize}',
       meiocondi,
-      '\n\\end{enumerate}\n\n\\begin{answerlit}\n\\item \\Sexpr{questions[1]}\n\\item \\Sexpr{questions[2]}\n\\end{answerlist}\n\\end{question}\n\n\\begin{solution}\n\\begin{answerlist}\n\\item \\Sexpr{solutions[1]}\n\\item \\Sexpr{solutions[2]}\n\\end{answerlist}\n\\end{solution}\n\n%% META-INFORMATION\n%% \\extype{cloze}\n%% \\exsolution{\\Sexpr{paste(solutions,collapse="|")}}\n%% \\exclozetype{num|num}')
+      '\n\\end{itemize}\n\n\\begin{answerlist}\n\\item \\Sexpr{questions[1]}\n\\item \\Sexpr{questions[2]}\n\\end{answerlist}\n\\end{question}\n\n\\begin{solution}\n\\begin{answerlist}\n\\item \\Sexpr{solutions[1]}\n\\item \\Sexpr{solutions[2]}\n\\end{answerlist}\n\\end{solution}\n\n%% META-INFORMATION\n%% \\extype{cloze}\n%% \\exsolution{\\Sexpr{paste(solutions,collapse="|")}}\n%% \\exclozetype{num|num}')
 
      paste0(chunk,latex)
     }
@@ -780,7 +776,7 @@ captureqmesc <- reactive({
 	meioanssol <- paste0(paste0('\n\\item \\Sexpr{solutions[',1:n,']}'),collapse='')
 
 	fim1 <- '\n\\end{answerlist}\n\\end{solution}
-	\n\n%% META-INFORMATION\n%% \\extype{cloze}\n%% \\exsolution{\\Sexpr{paste(solutions,collaps"|")}}\n'
+	\n\n%% META-INFORMATION\n%% \\extype{cloze}\n%% \\exsolution{\\Sexpr{paste(solutions,collapse="|")}}\n'
 
 	fim2 <- paste0('%% \\exclozetype{',paste(type,collapse="|"),'}')
 
@@ -809,7 +805,7 @@ captureqmesc <- reactive({
 	 meiosol[1], 
 	 input$altmistresp1,
 	 fimsol[1],	
-	 "\nquestion[2] <- '",
+	 "\nquestions[2] <- '",
 	 input$altmist2,"'",
 	 meiosol[2],
 	 input$altmistresp2,
@@ -839,7 +835,7 @@ captureqmesc <- reactive({
 	meioanssol <- paste0(paste0('\n\\item \\Sexpr{solutions[',1:2,']}'),collapse='')
 
 	fim1 <- '\n\\end{answerlist}\n\\end{solution}
-	\n\n%% META-INFORMATION\n%% \\extype{cloze}\n%% \\exsolution{\\Sexpr{paste(solutions,collaps"|")}}\n'
+	\n\n%% META-INFORMATION\n%% \\extype{cloze}\n%% \\exsolution{\\Sexpr{paste(solutions,collapse="|")}}\n'
 
 	fim2 <- paste0('%% \\exclozetype{',paste(type,collapse="|"),'}')
 

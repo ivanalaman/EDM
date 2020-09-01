@@ -1,4 +1,13 @@
- observe({
+output$headexamsUI <- renderUI({
+ tagList( 
+  textInput('textaval',h5(uiOutput("templ2")),value=tr("headaval")),
+  textInput('textunid',h5(uiOutput("templ3")),value=tr("headunid")),
+  textInput('textdisc',h5(uiOutput("templ4")),value=tr("headdisc")),
+  textInput('textcarg',h5(uiOutput("templ5")),value=tr("headchor"))
+ )
+}) 
+
+observe({
 
   # + Nome da avaliação
   textaval <- file('../../sup/aval.tex',
