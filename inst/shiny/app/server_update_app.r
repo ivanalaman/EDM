@@ -60,10 +60,11 @@ observeEvent(input$ok, {
   copysecurewid <- file.copy(from=pathwidgets,to=tempdir(),recursive=TRUE)#copiando o widgets antigo do usuário para um local seguro 
 
   remove.packages("EDM") #removendo o pacote EDM desatualizado!
+  detach("package:EDM",unload=TRUE)
   devtools::install_github("ivanalaman/EDM",upgrade="never",force=TRUE) #instalando nova versão!
   file.copy(from=paste0(tempdir(),"/questionbank"),to=pathEDM,recursive=TRUE)#copiando o banco de questões do usuário de volta para o pacote
   file.copy(from=paste0(tempdir(),"/aux_files/widgets"),to=paste0(pathEDM,"/aux_files"),recursive=TRUE)#copiando o widgets do usuário de volta para o pacote
-  file.copy(from=paste0(tempdir(),"/aux_files/.who.txt"),to=paste0(pathEDM,"/aux_files"),recursive=TRUE)#copiando o arquivo que grava a informação o último banco de dados que foi criado  pelo usuário
+  suppressWarnings(file.copy(from=paste0(tempdir(),"/aux_files/.who.txt"),to=paste0(pathEDM,"/aux_files"),recursive=TRUE))#copiando o arquivo que grava a informação o último banco de dados que foi criado  pelo usuário
 
   stopApp()
   showModal(modalDialog(
