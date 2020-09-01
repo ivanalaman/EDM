@@ -42,7 +42,7 @@ observeEvent(input$upp_app,{
 
 observeEvent(input$ok, {
 
- withProgress(message = tr("mgbase"), min=1,max=30,{
+ withProgress(message = tr("mgatuaapp"), min=1,max=30,{
   Sys.sleep(1)
   #Agora começa-se o procedimento de atualização
   pathlibraries <- .libPaths()
