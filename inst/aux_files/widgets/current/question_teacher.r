@@ -1,8 +1,8 @@
-#++++++++++++++++++++++++++++++++++++++++++++++++        Achim Zeileis         ++++++++++++++++++++++++++++++++++++++++
+#++++++++++++++++++++++++++++++++++++++++++++++++        Achim Zeileis        ++++++++++++++++++++++++++++++++++++++++
 dad_acz <- reactive({
 
  aa <- list.files('../../questionbank/austria/ACZ',
-                  pattern='*.Rnw',
+		  pattern='*.Rnw',
                   recursive=T,
                   full.names=T)
  aux_1 <- list.files('../../questionbank/austria/ACZ',

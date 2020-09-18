@@ -54,10 +54,6 @@ shinyServer(function(input,output,session){
 
  source("server_generating_files.r",local = TRUE)$value 
  
- #+++++++++++++                    Update App                  +++++++++++++++#
-
- source("server_update_app.r",local=TRUE)$value
-
  #+++++++++++++             Translate update question bank file!              +++++++++++++++#
 
  output$up_file <- renderUI({
@@ -94,11 +90,15 @@ shinyServer(function(input,output,session){
   return(HTML(html))
  })
 
+ #+++++++++++++                    Update App                  +++++++++++++++#
+
+ source("server_update_app.r",local=TRUE)$value
+ 
  session$onSessionEnded(function() {
   stopApp()
  })
 
  ## Debugin app!!
- #output$teste <- renderText({ str(tr("bsim")) })#é um character!!
+ #output$test <- renderText({ dim(questions())})#é um character!!
  #output$coco <- renderText({subsubdirs()})  
 })

@@ -20,18 +20,14 @@ A new discipline or subject will be created each time you click on the button "G
 
 It is important that the disciplines/subjects created are in lowercase letters. If the name is composed, separate it with *underline* (\_). Avoid accents, special characters, and more.
 
-## Programing a question
+## Debugging an Issue
 
 Once you've created your issue bank, you can start scheduling your first question.
 
-There are two options:
-1. Interactive
-  * In this case, there is a graphical interface to help you program a question. This interface was made mainly for those users who have no knowledge of LaTeX and/or the `R` language.
+In this menu there is an example for each type of question that can be elaborated. You have two options:
 
-2. Not interactive
-  * This option is for those who have some knowledge of LaTex and/or `R` language. There is an example for each type of question that can be asked. You have two options:
- 1. Elaborate the question directly in the application and then save the question. By default, the issue is saved in the default folder on your system (usually the *download* folder). Obviously you should put the question inside the appropriate folder in your question bank.
- 2. Save the question and then edit it with your preferred editor.
+1. Elaborate the question directly in the application and then save the question. By default, the issue is saved in the default folder on your system (usually the *download* folder). Obviously you should put the question inside the appropriate folder in your question bank.
+2. Save the question and then edit it with your preferred editor.
 
 Realize that issues must have a standard. This pattern is followed by the `exams` package. So while the application tries to minimize its effort to make an issue, we advise you to read the `exams` package manual for a deeper understanding.
 
@@ -48,10 +44,6 @@ In the second column you will choose how many tests/exercises you want to genera
 The great goal of the application is that you have a bank of questions not only with your questions but also with other teachers. So, if you want to update your bank with questions from other teachers click on the menu *Update question bank!* And then on the *Update* button.
 
 At the moment there is no distinction of country, subjects and disciplines. Therefore, updating the question bank will involve downloading all the files that will be on the server.
-
-## Updating the application
-
-The app can be updated simply by pressing the ** Update app!** button. This procedure preserves your question bank so that you can continue using the application without any problems.
 
 ## Other recommendations
 

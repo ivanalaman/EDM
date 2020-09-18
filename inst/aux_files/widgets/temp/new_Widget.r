@@ -1,9 +1,9 @@
 ,
-#++++++++++++++++++++++++++++++++++++++++++++++++        Ivan Bezerra Allaman         ++++++++++++++++++++++++++++++++++++++++
-checkboxInput('checkquestioniba', 
-              label='Ivan Bezerra Allaman',
+#++++++++++++++++++++++++++++++++++++++++++++++++        Manuela         ++++++++++++++++++++++++++++++++++++++++
+checkboxInput('checkquestionmne', 
+              label='Manuela',
               value = FALSE),
 conditionalPanel(
-                 condition = 'input.checkquestioniba',
-                 DT::dataTableOutput('questions_iba')
+                 condition = 'input.checkquestionmne',
+                 DT::dataTableOutput('questions_mne')
                  )

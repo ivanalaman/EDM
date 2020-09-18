@@ -1,7 +1,5 @@
 tabPanel(uiOutput("ini"),
- shinyjs::useShinyjs(),
- ## extendShinyjs(text = jsResetCode),utilizar no futuro para reiniciar o app automaticamente!
- h1(uiOutput("sigla"), 
+  h1(uiOutput("sigla"), 
   span(uiOutput("titulo"), 
    style = "font-weight: 300"), 
   style = "font-family: 'Source Sans Pro';

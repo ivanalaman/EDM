@@ -30,10 +30,6 @@ observeEvent(input$atubanco,{
   '/questionbankEDM-master/austria/ACZ',
   sep='')]
 
-#################
-#EU PRECISO PREPARAR UM SCRIPT QUE CHECA SE A VERSÃO BAIXADA DO REPOSITÓRIO CONTÉM NOVIDADES/AUTUALIZAÇÕES COMPARADO AO BANCO DE QUESTÕES ATUAL DO USUÁRIO. CASO NÃO HAJA ATUALIZAÇÕES, ENTÃO CRIA-SE UM modalDialog ou outro artifífico e encerra-se o procedimento. Caso contrário, continua-se o procedimento para atualizar o banco de questões.
-################
-
  # preparando objetos para fazer os widgets
  info_banco <- file(paste(tempdir(),
    '/questionbankEDM-master/CADASTRO.md',
@@ -273,8 +269,8 @@ observeEvent(input$atubanco,{
 
  stopApp()
  showModal(modalDialog(
-   title = "",
-   tr("mreiniciar"),
+   title = "Important message",
+   "Restart your application!",
    footer = modalButton("OK!"),
    size='m'))
 

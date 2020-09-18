@@ -6,7 +6,7 @@ A leitura deste tutorial é importante pois pretendemos esclarecer alguns pontos
 
 ## Criando um banco de questões
 
-Este menu é destinado aqueles que ainda não tem um banco de questões e gostariam de começar a contribuir. Percebam que na primeira etapa você deve inserir seu nome completo e uma sigla que representará seu banco. Esta sigla deve conter somente **três** letras maiúsculas para que haja uma padronização do aplicativo. Caso suas siglas coincida com outras já criada, será disparado um alerta avisando-o para trocá-las.
+Este menu é destinado aqueles que ainda não tem um banco de questões e gostariam de começar a contribuir com suas questões. Percebam que na primeira etapa você deve inserir seu nome completo e uma sigla que representará seu banco. Esta sigla deve conter somente três letras maiúsculas para que haja uma padronização do aplicativo. Caso suas siglas coincida com outras já criada, será disparado um alerta avisando-o para trocá-las.
 
 Na segunda etapa, você deve escolher uma _disciplina_ e um _assunto_ desta disciplina. Evitem acentos ou qualquer tipo de caractere ao criar a disciplina/assunto. Siga o exemplo sugerido.
 
@@ -22,16 +22,12 @@ Uma nova disciplina ou assunto será criada toda vez que você clicar no botão 
 
 ## Progamando uma questão
 
-Depois que você já criou se banco de questões, já pode começar a programar sua primeira questão. 
+Depois que você já criou se banco de questões, já pode começar a programar sua primeira questão.
 
-Existem duas opções:
-1. Interativa
- * Neste caso há uma interface gráfica para auxiliá-lo a programar uma questão. Esta interface foi feita principalmente para aqueles usuários que não tem qualquer conhecimento de LaTeX e/ou da linguagem `R`.
+Neste menu há um exemplo para cada tipo de questão que se pode elaborar. Você tem duas opções: 
 
-2. Não interativa
- * Esta opção é para aqueles que possuem algum conhecimento em LaTex e/ou linguagem `R`. Há um exemplo para cada tipo de questão que se pode elaborar. Você tem duas opções: 
-  1. Elaborar a questão diretamente no aplicativo e depois salvar a questão. Por _default_, a questão é salva na pasta _default_ do seu sistema (geralmente é a pasta *download*). Obviamente que você deverá colocar a questão dentro da pasta apropriada no seu banco de questões.
-  2. Salvar a questão e depois editá-la com seu editor preferido.
+1. Elaborar a questão diretamente no aplicativo e depois salvar a questão. Por default, a questão é salva na pasta default do seu sistema (geralmente é a pasta *download*). Obviamente que você deverá colocar a questão dentro da pasta apropriada no seu banco de questões.
+2. Salvar a questão e depois editá-la com seu editor preferido.
 
 Percebam que as questões devem ter um padrão. Este padrão é o seguido pelo pacote `exams`. Portanto, embora o aplicativo tente minimizar o seu esforço para fazer uma questão, aconselhamos que leia o manual do pacote `exams` para um conhecimento mais profundo.
 
@@ -47,11 +43,7 @@ Na segunda coluna você escolherá quantas provas/exercícios deseja gerar. Por 
 
 O grande objetivo do aplicativo é que você tenha um banco de questões não só com suas questões, mas também de outros professores. Logo, caso queira atualizar seu banco com questões de outros professores clique no menu *Atualizar banco de questões!* e em seguida no botão *Atualizar*.
 
-No momento não há uma distinção de país, matérias e disciplinas. Logo, a atualização do banco de questões implicará no Download de todos os arquivos que estarão no servidor.
-
-## Atualizando o aplicativo
-
-O aplicativo pode ser atualizado simplesmente ao apertar o botão **Atualizar app!**. Este procedimento preserva o seu banco de questão para que continue utilizando o aplicativo sem problemas.
+No momento não há uma distinção de país, matérias e disciplinas. Logo, a atualização do banco de questões implicará no Download de todos os arquivos qque estarão no servidor.
 
 ## Outras recomendações
 

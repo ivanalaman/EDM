@@ -1,5 +1,7 @@
 # Define UI for dataset viewer application
-shinyUI(navbarPage(theme = "bootstrap.css",
+shinyUI(
+ navbarPage(
+  theme = "bootstrap.css",
   tags$head(tags$style(HTML("
      .shiny-text-output {
       background-color:#fff;
@@ -13,7 +15,8 @@ shinyUI(navbarPage(theme = "bootstrap.css",
      source("ui_use_bd.r",local=TRUE)$value,
      source("ui_update_bd.r",local=TRUE)$value, 
      tabPanel(uiOutput("tutorial"),
-      #verbatimTextOutput('teste'),
+      verbatimTextOutput('teste'),
       uiOutput("up_guide")),
-     source("ui_update_app.r",local=TRUE)$value   
-     )) 
+     source("ui_update_app.r",local=TRUE)$value,
+     shinyjs::useShinyjs()
+     ))

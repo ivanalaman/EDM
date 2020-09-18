@@ -56,13 +56,19 @@
 
   dir.create(auxdisc, recursive=T) 
 
-  stopApp()
   showModal(modalDialog(
-    title = "Important message",
-    "Restart your application!",
-    footer = modalButton("OK!"), 
+    title = uiOutput("tirefreshapp"),
+    uiOutput("merefreshapp"),
+    footer = tagList(
+     actionButton('closecreatecc',"Ok!")
+     ),
     size='m'
-    ))  
+    )) 
+
+  observeEvent(input$closecreatecc,{
+   stopApp()
+   })
+ 
  })
 
  subsubdirs <- reactive({
@@ -135,11 +141,18 @@
 
   lapply(aux2,function(x)sapply(x,function(y)dir.create(y,recursive=T)))
 
-  stopApp()
   showModal(modalDialog(
-    title = "Important message",
-    "Restart your application!",
-    footer = modalButton("OK!"), 
+    title = uiOutput("tirefreshapp"),
+    uiOutput("merefreshapp"),
+    footer = tagList(
+     actionButton('closecreatecm',"Ok!")
+     ),
     size='m'
-    ))   
+    )) 
+
+  observeEvent(input$closecreatecm,{
+   stopApp()
+   })
+
  })
+

@@ -1,11 +1,20 @@
-2020-09-01  vs. 1.0-6 - Ivan Bezerra Allaman <ivanalaman@gmail.com>
+2020-09-18 vs. 1.0-61 - Ivan Bezerra Allaman <ivanalaman@gmail.com>
+  * fixed the bug when generating pdf files.
+  * Change the downloadHandler function by actionButton to gerenerate pdf and
+  xml files.
+  * Improvement in the message window when creating a database, course or
+  matter (modalDialog).
+
+2020-09-01 vs. 1.0-6 - Ivan Bezerra Allaman <ivanalaman@gmail.com>
   * Add a button to update app.
   * Add a graphical interface to program question.
-  * 2020-08-19 -> Resolved problem with unicode characters of linux to
+  * Resolved problem with unicode characters of linux to
   windows. In the file auxiliary_files_EDM/dicionario.csv, change õ by
   &otilde;. Still, add the "pattern="*.Rnw"" in the question_teacher.r
   function. This argument ensures that only ".Rnw" files will be read in the
   table.
+
+2020-08-19 vs. 1.0-5 - Ivan Bezerra Allaman <ivanalaman@gmail.com> 
   * 2020-02-09 -> Add code to install Ruchardet package from github
   * Replacement of the Ruchardet package by readr package.
 

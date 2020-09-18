@@ -5,7 +5,10 @@ getid <- reactive({
     format(i, width=2)),sep='')
  })
 
- res <- reactive({ 
+observeEvent(input$downloadPDF,{ 
+ withProgress(min=0,max=30,{
+  Sys.sleep(1)
+
   exams2pdf(questions(),
    n = input$numquestion,
    template = c('../../template/avaliacao.tex',
@@ -20,38 +23,73 @@ getid <- reactive({
      "anol.tex",
      "nome.tex")),
    encoding = "UTF-8")
+
+  showModal(modalDialog(
+    title = "Important message",
+    paste0("Arquivos baixados na pasta",Sys.getenv("HOME"),"/EDM"),
+    footer = modalButton("OK!"),
+    size='m'
+    )) 
+   })
  })
 
- output$downloadPDF <- downloadHandler(filename = function(){
-  paste('av','1.pdf',sep='')
- },
- content = function(arq){
-
-  res()
-  file.copy('av1.pdf',
-   arq)	
- },
- contentType = 'application/pdf'
-
- )
-
- output$downloadXML <- downloadHandler(filename = function(){
-  paste('moodlequiz','.xml',sep='')
- },
- content = function(file){
+observeEvent(input$downloadXML,{ 
+ withProgress(min=0,max=30,{
+  Sys.sleep(1)
 
   exams2moodle(questions(),
    n = input$numquestion,
    dir = paste(Sys.getenv('HOME'),'/EDM',sep=''), 
    encoding = "UTF-8")
 
-  file.copy('moodlequiz.xml',
-   file)
+  showModal(modalDialog(
+    title = "Important message",
+    paste0("Arquivo baixado na pasta",Sys.getenv("HOME"),"/EDM"),
+    footer = modalButton("OK!"),
+    size='m'
+    )) 
+   })
+ })
 
- },
- contentType = 'application/xml'
 
- ) 
+# output$downloadPDF <- downloadHandler(
+#  #   filename = function(){
+#  #   paste('av','1.pdf',sep='')
+#  #  },
+#  filename = function(){
+#   paste0(Sys.getenv("HOME"),"/EDM/av1.pdf")
+#  },
+#  content = function(arq){
+# 
+#   withProgress(min=0,max=1,{
+#    incProgress(message = "Processing file into /yourhome/EDM",
+#     detail = "This may take a while...",amount = 0.1)
+#    res()
+#    file.copy('av1.pdf',
+#     arq)
+#    }
+#    #contentType = 'application/pdf'
+#   )
+#  })
+
+#  output$downloadXML <- downloadHandler(
+#   filename = function(){
+#   paste('moodlequiz','.xml',sep='')
+#  },
+#  content = function(file){
+# 
+#   exams2moodle(questions(),
+#    n = input$numquestion,
+#    dir = paste(Sys.getenv('HOME'),'/EDM',sep=''), 
+#    encoding = "UTF-8")
+# 
+#   file.copy('moodlequiz.xml',
+#    file)
+# 
+#  },
+#  contentType = 'application/xml'
+# 
+#  ) 
 
  output$downloadQuestions <- downloadHandler(
   filename = function() {
