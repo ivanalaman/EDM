@@ -5,6 +5,14 @@ getid <- reactive({
     format(i, width=2)),sep='')
  })
 
+ostype <- reactive({
+ 
+ ifelse(.Platform$OS.type=="unix",
+  ost <- "/EDM",
+  ost <- "\\EDM")
+})
+
+
 observeEvent(input$downloadPDF,{ 
  withProgress(min=0,max=30,{
   Sys.sleep(1)
@@ -25,8 +33,8 @@ observeEvent(input$downloadPDF,{
    encoding = "UTF-8")
 
   showModal(modalDialog(
-    title = "Important message",
-    paste0("Arquivos baixados na pasta",Sys.getenv("HOME"),"/EDM"),
+    title = uiOutput("tirefreshapp"),
+    paste0(tr("meresavedfiles"),' ',Sys.getenv("HOME"),ostype()),
     footer = modalButton("OK!"),
     size='m'
     )) 
@@ -43,8 +51,8 @@ observeEvent(input$downloadXML,{
    encoding = "UTF-8")
 
   showModal(modalDialog(
-    title = "Important message",
-    paste0("Arquivo baixado na pasta",Sys.getenv("HOME"),"/EDM"),
+    title = uiOutput("tirefreshapp"),
+    paste0(tr("meresavedfiles"),Sys.getenv("HOME"),"/EDM"),
     footer = modalButton("OK!"),
     size='m'
     )) 

@@ -1,1 +1,1 @@
-Verifique se o seu aplicativo está atualizado! Fique tranquilo, pois o seu banco de questões será preservado!
+Verifique se o seu aplicativo está atualizado! Embora o aplicativo tentará preservar seu banco de questões, é de suma importância que tenha um backup em um outro diretório conforme sugerido no link https://github.com/ivanalaman/questionbankEDM/tree/master/lang/portuguese_br.

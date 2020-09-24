@@ -1,7 +1,7 @@
 \documentclass[10pt, a4paper]{article}
 \usepackage[utf8]{inputenc}
 \usepackage[brazilian]{babel}
-\usepackage{a4wide,color,verbatim,Sweave,url,xargs}
+\usepackage{a4wide,color,verbatim,url,xargs,fancyvrb,graphicx}
 \usepackage{fancyhdr}
 \usepackage{float}
 \usepackage{amsthm}       
@@ -71,6 +71,11 @@
 {\textnormal{\bf \large Gabarito: \myID}}
 \pagestyle{myheadings}
 
+\DefineVerbatimEnvironment{Sinput}{Verbatim}{fontshape=sl}
+\DefineVerbatimEnvironment{Soutput}{Verbatim}{}
+\DefineVerbatimEnvironment{Scode}{Verbatim}{fontshape=sl}
+\newenvironment{Schunk}{}{}
+
 \begin{document}
 
 %% title page
@@ -84,7 +89,7 @@
 
 \begin{tabular}{p{14cm}}
 \textbf{Nome:} \hrule \\[1.5cm]
-\textbf{Matrícula:} \hrule \\[1.5cm]
+\textbf{Matr{\'i}cula:} \hrule \\[1.5cm]
 \end{tabular}
 
 \vspace*{1cm}

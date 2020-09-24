@@ -24,12 +24,15 @@ Uma nova disciplina ou assunto será criada toda vez que você clicar no botão 
 
 Depois que você já criou se banco de questões, já pode começar a programar sua primeira questão.
 
-Neste menu há um exemplo para cada tipo de questão que se pode elaborar. Você tem duas opções: 
+Neste menu há duas opções. Interativo e Não interativo.
 
-1. Elaborar a questão diretamente no aplicativo e depois salvar a questão. Por default, a questão é salva na pasta default do seu sistema (geralmente é a pasta *download*). Obviamente que você deverá colocar a questão dentro da pasta apropriada no seu banco de questões.
-2. Salvar a questão e depois editá-la com seu editor preferido.
+1. Interativo
+   * É para aqueles que não tem conhecimento em LaTeX. O usuário deve seguir o exemplo sugerido em cada questão. Tentei ser o mais intuitivo possível. Após preencher os campos e apertar o botão salvar, um arquivo com o nome "myfile.Rnw" será salvo na pasta padrão do seu sistema (geralmente é a pasta *download*). Você deverá copiar o arquivo para dentro do seu banco de questões e editá-lo caso queira, para corrigir algum problema de acentuação por exemplo. Leia o texto no link https://github.com/ivanalaman/questionbankEDM/tree/master/lang/portuguese_br para maiores detalhes.
 
-Percebam que as questões devem ter um padrão. Este padrão é o seguido pelo pacote `exams`. Portanto, embora o aplicativo tente minimizar o seu esforço para fazer uma questão, aconselhamos que leia o manual do pacote `exams` para um conhecimento mais profundo.
+2. Não interativo
+   * É para aqueles que tem algum conhecimento em LaTeX. Neste caso, para cada tipo de questão será apresentado o código fonte. O usuário deve seguir o exemplo sugerido. Um arquivo com o nome "myfile.Rnw" será salvo na pasta padrão do seu sistema (geralmente é a pasta *download*). Você deverá copiar o arquivo para dentro do seu banco de questões. Leia o texto no link https://github.com/ivanalaman/questionbankEDM/tree/master/lang/portuguese_br para maiores detalhes.
+
+Percebam que as questões devem ter um padrão. Este padrão é o seguido pelo pacote [exams](https://cran.r-project.org/web/packages/exams/index.html). Portanto, embora o aplicativo tente minimizar o seu esforço para fazer uma questão, aconselhamos que acesse o site oficial do pacote [exams](https://cran.r-project.org/web/packages/exams/index.html) http://www.r-exams.org/ para um conhecimento mais profundo.
 
 ## Utilizar o banco de questões
 
@@ -43,12 +46,12 @@ Na segunda coluna você escolherá quantas provas/exercícios deseja gerar. Por 
 
 O grande objetivo do aplicativo é que você tenha um banco de questões não só com suas questões, mas também de outros professores. Logo, caso queira atualizar seu banco com questões de outros professores clique no menu *Atualizar banco de questões!* e em seguida no botão *Atualizar*.
 
-No momento não há uma distinção de país, matérias e disciplinas. Logo, a atualização do banco de questões implicará no Download de todos os arquivos qque estarão no servidor.
+No momento não há uma distinção de país, matérias e disciplinas. Logo, a atualização do banco de questões implicará no Download de todos os arquivos que estarão no servidor.
 
 ## Outras recomendações
 
 Evite copiar a questão de um banco e colocar na sua base, pois deste modo, irá duplicar as questões e a idéia não é essa. Se tiver alguma coisa errada na questão de uma base que não é sua, envie um email para o mantenedor do banco de questões que estará no arquivo **CADASTRO.md** no repositório  https://github.com/ivanalaman/questionbankEDM.
 
-Faça como o autor do aplicativo, seja **solidário**, **compartilhe**. Ao colocar algumas questões na sua base, envie o seu arquivo por meio do seguinte link: http://nbcgib.uesc.br/lec/software/editores/examsdm-r. Após a revisão do arquivo, seu banco de questões será colocado no repositório https://github.com/ivanalaman/questionbankEDM para que outros usuários tenham acesso e também possam utilizar suas questões. 
+Faça como o autor do aplicativo, seja **solidário**, **compartilhe**. Ao colocar algumas questões na sua base, envie o seu arquivo compactado para o email iballaman@uesc.br. Após a revisão do arquivo, seu banco de questões será colocado no repositório https://github.com/ivanalaman/questionbankEDM para que outros usuários tenham acesso e também possam utilizar suas questões. 
 
 Caso haja algum *bug* no aplicativo e você não tenha intimidade com programação o suficiente para corrigí-lo, envie um email para iballaman@uesc.br e relate o *bug* para que possa ser corrigido.

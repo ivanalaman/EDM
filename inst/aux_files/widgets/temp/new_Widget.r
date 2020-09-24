@@ -1,9 +1,9 @@
 ,
-#++++++++++++++++++++++++++++++++++++++++++++++++        Manuela         ++++++++++++++++++++++++++++++++++++++++
-checkboxInput('checkquestionmne', 
-              label='Manuela',
+#++++++++++++++++++++++++++++++++++++++++++++++++        joão         ++++++++++++++++++++++++++++++++++++++++
+checkboxInput('checkquestionjja', 
+              label='joão',
               value = FALSE),
 conditionalPanel(
-                 condition = 'input.checkquestionmne',
-                 DT::dataTableOutput('questions_mne')
+                 condition = 'input.checkquestionjja',
+                 DT::dataTableOutput('questions_jja')
                  )

@@ -1,5 +1,8 @@
+2020-09-24 vs. 1.0-62 - Ivan Bezerra Allaman <ivanalaman@gmail.com>
+  * Fixed problem with characters.
+
 2020-09-18 vs. 1.0-61 - Ivan Bezerra Allaman <ivanalaman@gmail.com>
-  * fixed the bug when generating pdf files.
+  * Fixed the bug when generating pdf files.
   * Change the downloadHandler function by actionButton to gerenerate pdf and
   xml files.
   * Improvement in the message window when creating a database, course or

@@ -1,13 +1,9 @@
 #++++++++++++++ Questão do tipo dissertativa texto +++++++++++++++#
 
 bsimm <- reactive({
- if(input$language == "br"){
-  res <- list("Sim" = 1, "Não" = 2)
-  res
- }else{
-  res <- list("Yes" = 1, "Not" = 2)
-  res
- }
+     res <- list('sim' = 1, 'nao' = 2)
+         names(res) <- c(tr('bsim'),tr('bnao'))
+         res
 })
 
 output$textAtextoUI <- renderUI({

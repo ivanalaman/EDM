@@ -1,1 +1,1 @@
-Make sure your app is up to date! Don't worry, your question bank will be preserved!
+Make sure your app is up to date! Although the application will try to preserve its question bank, it is of utmost importance that it has a backup in another directory as suggested in the link https://github.com/ivanalaman/questionbankEDM.

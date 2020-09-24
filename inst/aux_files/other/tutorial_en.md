@@ -20,16 +20,19 @@ A new discipline or subject will be created each time you click on the button "G
 
 It is important that the disciplines/subjects created are in lowercase letters. If the name is composed, separate it with *underline* (\_). Avoid accents, special characters, and more.
 
-## Debugging an Issue
+## Making a quizz
 
 Once you've created your issue bank, you can start scheduling your first question.
 
-In this menu there is an example for each type of question that can be elaborated. You have two options:
+In this menu there are two options. Interactive and Non-interactive.
 
-1. Elaborate the question directly in the application and then save the question. By default, the issue is saved in the default folder on your system (usually the *download* folder). Obviously you should put the question inside the appropriate folder in your question bank.
-2. Save the question and then edit it with your preferred editor.
+1. Interactive
+   * It is for those who have no knowledge of LaTeX. The user must follow the example suggested in each question. I tried to be as intuitive as possible. After filling in the fields and pressing the save button, a file with the name "myfile.Rnw" will be saved in your system's default folder (usually the *download* folder). You should copy the file into your question bank and edit it if you want, to correct any accentuation problems for example. Read the text on the link https://github.com/ivanalaman/questionbankEDM/tree/master/lang/portuguese_br for more details.
 
-Realize that issues must have a standard. This pattern is followed by the `exams` package. So while the application tries to minimize its effort to make an issue, we advise you to read the `exams` package manual for a deeper understanding.
+2. Not interactive
+   * It is for those who have some knowledge in LaTeX. In this case, for each type of question the source code will be presented. The user must follow the suggested example. A file named "myfile.Rnw" will be saved in your system's default folder (usually the * download * folder). You must copy the file into your question bank. Read the text on the link https://github.com/ivanalaman/questionbankEDM/tree/master/lang/portuguese_br for more details.
+
+Realize that the questions must have a pattern. This pattern is followed by the [exams](https://cran.r-project.org/web/packages/exams/index.html) package. Therefore, although the application tries to minimize your effort to ask a question, we advise you to visit the official website of the [exams](https://cran.r-project.org/web/packages/exams/index.html) package http://www.r-exams.org/ for deeper knowledge.
 
 ## Use question bank
 
@@ -49,6 +52,6 @@ At the moment there is no distinction of country, subjects and disciplines. Ther
 
 Avoid copying the issue of a bank and put it in your database, as this will double the issues and the idea is not this. If there is anything wrong with the question of a basis that is not yours, send an email to the maintainer of the question bank that will be in the file **REGISTRATION.md** in the https://github.com/ivanalaman/questionbankEDM repository.
 
-Do as the author of the application, be **supportive**, **share**. When placing some questions in your base, send your file through the following link: http://nbcgib.uesc.br/lec/software/editores/examsdm-r. After reviewing the file, your question bank will be placed in the https://github.com/ivanalaman/questionbankEDM repository so that other users can access and can also use your questions.
+Do as the author of the application, be **supportive**, **share**. When placing some questions in your base, send your compress file to email iballaman@uesc.br. After reviewing the file, your question bank will be placed in the https://github.com/ivanalaman/questionbankEDM repository so that other users can access and can also use your questions.
 
 If there is any bug in the application and you do not have enough programming intimacy to correct it, send an email to iballaman@uesc.br and report the bug so it can be fixed.
