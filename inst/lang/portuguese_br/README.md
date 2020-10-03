@@ -7,20 +7,33 @@ O objetivo é fornecer uma interface gráfica em html para gerar provas em PDF e
 
 Outro aspecto interessante do pacote é a possibilidade de gerar provas utilizando o banco de questões de outros professores, aumentado de forma significativa as opções de um professor elaborar uma prova. Imagine que o pacote EDM contenha 5 banco de questões da sua área de atuação, incluindo a sua. Imagine que em cada banco de questões tenha 10 questões. Então, ao elaborar uma prova você contará com um total de 50 questões. Por isso é tão importante que você compartilhe seu banco de questões. Mais abaixo terá instruções de como fazer isso.
 
-## Pré-requisitos para instalação
-Você deve primeiramente instalar o software [R](https://www.r-project.org/). Existem vários vídeos no [youtube](https://www.youtube.com/) ensinando como fazer isso. Uma sugestão de vídeo é https://www.youtube.com/watch?v=HNJpWe_kh8Y. Se o intuito for gerar provas em PDF, então você deve ter instalado também o programa [MikTeX](https://miktex.org/). 
+## Pré-requisitos para instalação do pacote EDM
+Você deve primeiramente instalar o software [R](https://www.r-project.org/). Existem vários vídeos no [youtube](https://www.youtube.com/) ensinando como fazer isso. Uma sugestão de vídeo é https://www.youtube.com/watch?v=HNJpWe_kh8Y. 
 
-Como o pacote EDM não está disponível oficialmente no [CRAN](https://cran.r-project.org/), sugiro fortemente a instalação do programa [Rtools](https://cran.r-project.org/bin/windows/Rtools/), para evitar aborrecimentos na hora de instalar o pacote EDM.
-
-Instale também os pacotes [devtools](https://cran.r-project.org/web/packages/devtools/index.html) e [tinytex](https://cran.r-project.org/web/packages/tinytex/index.html). Caso não saiba como fazer isto, abra o programa [R](https://www.r-project.org/) e digite no console:
+Instale também o pacote [devtools](https://cran.r-project.org/web/packages/devtools/index.html), pois precisaremos de sua função `install_github` para instalar o pacote EDM. Caso não saiba como fazer isto, abra o programa [R](https://www.r-project.org/) e digite no console:
 
 ```{r}
 install.packages('devtools')
 ```
 
-Ou assista o vídeo a seguir: https://www.youtube.com/watch?v=P2bE-HIng08. Proceda da mesma forma com o pacote [tinytex](https://cran.r-project.org/web/packages/tinytex/index.html).
+Ou assista o vídeo a seguir: https://www.youtube.com/watch?v=P2bE-HIng08. 
 
-## Instalação
+## Pré-requisitos de instalação para gerar as provas em PDF
+Os arquivos PDF gerados pelo pacote EDM utilizam o programa [LaTeX](https://www.latex-project.org/), que é um sistema de altíssimo nível utilizado para preparação de documentos. 
+
+Logo, você não tem este programa instalado em sua máquina, instale o pacote tinytex](https://cran.r-project.org/web/packages/tinytex/index.html) do software R e execute os seguintes comandos:
+
+```{r}
+library(tinytex)
+install_tinytex()
+```
+
+A depender da velocidade de sua internet, o procedimento citado irá demandar um pouco de tempo. Logo, espere até a finalização da instalação.
+
+## Pré-requisitos de instalação para gerar as provas em XML
+Para gerar as provas em XML é necessário antes ter instalado o programa [pandoc](https://pandoc.org/installing.html). Caso o programa R esteja aberto após a finalização da instalação, feche-o e, reinicie para o reconhecimento do [pandoc](https://pandoc.org/installing.html).
+
+## Instalação do pacote EDM
 Abra o programa [R](https://www.r-project.org/) e digite no console os seguintes comandos:
 
 ```{r}
@@ -53,13 +66,18 @@ startEDM()
 ```
 Deverás abrir uma página em html no seu navegador padrão como sugere a figura a seguir:
 
-![homeedm](https://github.com/ivanalaman/EDM/blob/master/inst/images/homeedm_br.jpg)
+<!--![homeedm](https://github.com/ivanalaman/EDM/blob/master/inst/images/homeedm_br.gif)-->
+<img src="C:\Users\ivan\Dropbox\Documentos\UESC\projetos_pesquisa\DCET\ivan\pacotes\main\EDM\inst\images\homeedm_br.gif" width="700" height="550" />
 
 Explore o aplicativo navegando nos diferentes __menus__. Gere uma prova no formato PDF para ver como funciona. Veja a figura a seguir:
 
 ![gerarpdf](https://github.com/ivanalaman/EDM/blob/master/inst/images/gerarpdf_br.gif)
 
-Se tudo ocorreu certo, o arquivo foi salvo dentro da pasta **EDM** criada na seu diretório de trabalho. No windows por exemplo, você encontrará a pasta no seguinte caminho: **C:\Usuários\Seunome\Documentos\EDM**. No linux o caminho seria: **/home/usuário/EDM**. Se não consta na pasta nenhum arquivo, provavelmente ocorreu algum erro devido alguma instalação anterior. Neste caso, envie um email para iballaman@uesc.br para que eu posso te ajudar.
+Se tudo ocorreu certo, o arquivo foi salvo dentro da pasta **EDM** criada no seu diretório de trabalho. No windows por exemplo, você encontrará a pasta no seguinte caminho: **C:\Usuários\Seunome\Documentos\EDM**. No linux o caminho seria: **/home/usuário/EDM**. Se não consta na pasta nenhum arquivo, provavelmente ocorreu algum erro devido alguma instalação anterior.
+
+Se você for usuário LaTeX e já tem instalado o TeXLive ou o MiKTeX e mesmo assim houve erro ao gerar o PDF, execute os passos da seção **Pré-requisitos de instalação para gerar as provas em PDF**. 
+
+Se ainda sim o problema persistir, não hesite em enviar um email para iballaman@uesc.br para que eu posso te ajudar.
 
 ## Criando um banco de questões
 Depois de ter explorado o aplicativo, chegou o momento de você criar o seu próprio banco de questões para utilizá-lo na elaboração de suas provas. A figura abaixo mostra o procedimento.

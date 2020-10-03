@@ -1,5 +1,7 @@
 shinyServer(function(input,output,session){           
 
+ options(warn = -1)
+ 
  #+++++++++++++          File to translate words of app         +++++++++++++++#
  
  source("server_words.r",local = TRUE)$value
@@ -95,6 +97,7 @@ shinyServer(function(input,output,session){
  source("server_update_app.r",local=TRUE)$value
  
  session$onSessionEnded(function() {
+  options(warn = 0)
   stopApp()
  })
 

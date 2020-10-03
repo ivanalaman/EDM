@@ -1,11 +1,10 @@
 Package: EDM
 Title: Exams Database Manager
-Version: 1.0-62
-Date: 2020-09-24
+Version: 1.0-63
+Date: 2020-10-03
 Author: Ivan Bezerra Allaman <ivanalaman@gmail.com>
 Maintainer: Ivan Bezerra Allaman <ivanalaman@gmail.com>
-Description: Interactive shiny application for working with exames database 
-  managing.
+Description: Interactive shiny application for working with exames database managing.
 License: GPL (>= 2)
 Depends: R (>= 3.0.3), shiny (>= 1.0.3), exams
 Imports: readr, DT (>= 0.2), shinyjs, markdown

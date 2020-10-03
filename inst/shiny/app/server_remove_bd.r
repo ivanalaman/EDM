@@ -16,23 +16,17 @@ observeEvent(input$removerb, {
  withProgress(message = tr("mgbase"), min=1,max=30, {
   Sys.sleep(1) 
 
-  aux_rem  <- list.dirss(path='../../questionbank/')
-  aux_rem1 <- list.dirss(path=paste('../../questionbank/',
-    aux_rem,
-    sep=''))
+  aux_rem  <- list.dirss(path='../../questionbank/',
+                         full.names=TRUE)#caminho dos diretórios dos países 
+  aux_rem1 <- list.dirss(aux_rem,full.names=TRUE)#caminho dos diretórios dos bancos
+ 
+  names(aux_rem1) <- list.dirss(aux_rem)
+  aux_rem11 <- aux_rem1[names(aux_rem1)!='ACZ']
 
-  aux_rem11 <- paste('../../questionbank/',
-   aux_rem,
-   '/',
-   aux_rem1,
-   sep='')
-  names(aux_rem11) <- aux_rem1
-  aux_rem11 <- aux_rem11[names(aux_rem11)!='ACZ']
-
-  siglasr   <- tolower(aux_rem1[aux_rem1!='ACZ'])
+  siglasr   <- tolower(names(aux_rem11))
 
   aux_siglasr <- paste('input$checkquestionr',siglasr,sep='')
-  aux_siglas1r <- unlist(sapply(aux_siglasr, function(x) eval(parse(text=x))))
+  aux_siglas1r <- unlist(sapply(aux_siglasr, function(x) eval(parse(text=x))))#é um vetor lógico, true para as bases marcadas e false para aquelas não marcadas
 
   aux_grepp <- siglasr[aux_siglas1r]
 
@@ -40,6 +34,16 @@ observeEvent(input$removerb, {
 
   unlink(aux_grepp1,
    recursive = TRUE)
+   
+   #Checando se alguma pasta ficou vazia para deletá-la
+   check1 <- mgsub(paste0('/',names(aux_rem11)),
+                  rep('',length(aux_rem11)),aux_rem11)
+   check2 <- sapply(check1,function(x)list.files(x))
+   check3 <- unlist(lapply(check2,length))
+   posrmd <- which(check3 == 0)
+   
+   unlink(check1[posrmd],recursive=TRUE)
+   ######################
 
   aux_ch <- mgsub(paste('/',
     toupper(aux_grepp),
@@ -131,7 +135,11 @@ observeEvent(input$removerb, {
   fr6 <- '../../aux_files/widgets/current/remove_widgets.r'
   cat(aux_widgr6,file=fr6,sep='\n')
 
+  if(file.exists('../../aux_files/.who.txt')){
+  
   file.remove('../../aux_files/.who.txt')
+ 
+ }
 
   showModal(modalDialog(
     title = uiOutput("tirefreshapp"),

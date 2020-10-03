@@ -77,19 +77,19 @@ observeEvent(input$gerarb, {
    #             ++++++++++++++ Criando Widgets para o novo usuário ++++++++++++++++ #
 
    new_widget(namefil   = namefil,
-    your_name = your_name)
+    your_name = your_name,i=1)
 
    #             ++++++++++++++ Criando Question teacher para o novo usuário ++++++++++++++++ #
 
    new_questiont(namefil   = namefil, 
     your_name = your_name, 
     namedir   = namedir, 
-    namecou   = namecou) 
+    namecou   = namecou,i=1) 
 
    #             ++++++++++++++ Criando Widgets para remoção ++++++++++++++++ #
 
    new_remove_widgets(namefil   = namefil, 
-    your_name = your_name) 
+    your_name = your_name,i=1) 
 
    #             +++++++++++++ Escrevendo o novo Widget completo para arquivo ui.r +++++++++++++ #
 
