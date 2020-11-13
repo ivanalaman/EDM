@@ -66,18 +66,26 @@ startEDM()
 ```
 Deverás abrir uma página em html no seu navegador padrão como sugere a figura a seguir:
 
-<!--![homeedm](https://github.com/ivanalaman/EDM/blob/master/inst/images/homeedm_br.gif)-->
-<img src="C:\Users\ivan\Dropbox\Documentos\UESC\projetos_pesquisa\DCET\ivan\pacotes\main\EDM\inst\images\homeedm_br.gif" width="700" height="550" />
+<!--![homeedm](https://github.com/ivanalaman/EDM/blob/master/inst/images/homeedm_br.png)-->
+<img src="C:\Users\ivan\Dropbox\Documentos\UESC\projetos_pesquisa\DCET\ivan\pacotes\main\EDM\inst\images\homeedm.png" width="700" height="550" />
 
-Explore o aplicativo navegando nos diferentes __menus__. Gere uma prova no formato PDF para ver como funciona. Veja a figura a seguir:
+Explore o aplicativo navegando nos diferentes __menus__. Gere uma prova no formato PDF para testar se os pré-requisitos foram bem instalados. Veja a figura a seguir:
 
-![gerarpdf](https://github.com/ivanalaman/EDM/blob/master/inst/images/gerarpdf_br.gif)
+<img src="C:\Users\ivan\Dropbox\Documentos\UESC\projetos_pesquisa\DCET\ivan\pacotes\main\EDM\inst\images\gerarpdf.png" width="700" height="550" />
 
-Se tudo ocorreu certo, o arquivo foi salvo dentro da pasta **EDM** criada no seu diretório de trabalho. No windows por exemplo, você encontrará a pasta no seguinte caminho: **C:\Usuários\Seunome\Documentos\EDM**. No linux o caminho seria: **/home/usuário/EDM**. Se não consta na pasta nenhum arquivo, provavelmente ocorreu algum erro devido alguma instalação anterior.
+Se tudo ocorreu certo, deverá abrir um popup informando onde os arquivos foram salvos. 
+
+<img src="C:\Users\ivan\Dropbox\Documentos\UESC\projetos_pesquisa\DCET\ivan\pacotes\main\EDM\inst\images\messagesavepdf.png" width="700" height="550" />
+
+São criados dois arquivos. Um é referente ao gabarito e outro referente a prova. Por padrão, o arquivo é salvo dentro da pasta **EDM** criada no seu diretório de trabalho. No windows por exemplo, você encontrará a pasta no seguinte caminho: **C:\Usuários\Seunome\Documentos\EDM**. No linux o caminho seria: **/home/usuário/EDM**. 
+
+<img src="C:\Users\ivan\Dropbox\Documentos\UESC\projetos_pesquisa\DCET\ivan\pacotes\main\EDM\inst\images\edmfolder.png" width="700" height="550" />
+
+Se não consta na pasta nenhum arquivo, provavelmente ocorreu algum erro devido alguma instalação anterior.
 
 Se você for usuário LaTeX e já tem instalado o TeXLive ou o MiKTeX e mesmo assim houve erro ao gerar o PDF, execute os passos da seção **Pré-requisitos de instalação para gerar as provas em PDF**. 
 
-Se ainda sim o problema persistir, não hesite em enviar um email para iballaman@uesc.br para que eu posso te ajudar.
+Se ainda sim o problema persistir, não hesite em enviar um email para iballaman@uesc.br para obter ajuda.
 
 ## Criando um banco de questões
 Depois de ter explorado o aplicativo, chegou o momento de você criar o seu próprio banco de questões para utilizá-lo na elaboração de suas provas. A figura abaixo mostra o procedimento.
