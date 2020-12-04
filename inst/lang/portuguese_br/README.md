@@ -1,7 +1,7 @@
 # Gerenciador de banco de questões EDM
 
 ## Introdução
-O pacote EDM (Exams Database Manager) foi elaborado utilizando o pacote [shiny](https://cran.r-project.org/web/packages/shiny/index.html) do software [R](https://www.r-project.org/). Para conhecer melhor o pacoge [shiny](https://cran.r-project.org/web/packages/shiny/index.html) visite a página oficial [https://shiny.rstudio.com/](https://shiny.rstudio.com/). 
+O pacote EDM (Exams Database Manager) foi elaborado utilizando o pacote [shiny](https://cran.r-project.org/web/packages/shiny/index.html) do software [R](https://www.r-project.org/). Para conhecer melhor o pacote [shiny](https://cran.r-project.org/web/packages/shiny/index.html) visite a página oficial [https://shiny.rstudio.com/](https://shiny.rstudio.com/). 
 
 O objetivo é fornecer uma interface gráfica em html para gerar provas em PDF e em XML (formato do MOODLE) por meio de um banco de questões gerenciável. Ainda, é possível programar questões dos mais variados tipos como: dissertativa texto, dissertativa numérica, única escolha, múltipla escolha, associação e mista (combinando algumas das opções anteriores). 
 
@@ -99,14 +99,14 @@ Após criar o banco de questões, siga as instruções que constam no repositór
 ## Programando questões
 O pacote EDM possui um menu específico para elaboração de questões, tanto interativo quanto não interativo. Para aqueles que não tem nenhuma familiaridade com códigos [LaTeX](https://www.latex-project.org/), poderá utilizar a interface interativa. Já aqueles que tem familiaridade com o [LaTeX](https://www.latex-project.org/), poderá utilizar o menu não interativo.
 
-<img src="http://nbcgib.uesc.br/lec/download/ivan/pacotes/EDM/imagens/pquestao.png" width="650" height="200" />
+<img src="http://nbcgib.uesc.br/lec/download/ivan/pacotes/EDM/imagens/pquestao.png" width="650" height="200"/>
 
 ### Questão dissertativa do tipo texto
 Este tipo de questão tem apenas uma resposta que no caso é um texto. Recomenda-se que a resposta seja a mais objetiva possível. Vejamos um exemplo:
 
 <ol>
  <li><b> Defina probabilidade!</b></li>
- <p><i>Resposta: Probabilidade é um número que expressa a chance de um determinado evento acontecer..</i></p>
+ <i>Resposta: Probabilidade é um número que expressa a chance de um determinado evento acontecer.</i>
 </ol>
 
 A elaboração do exemplo acima utilizando o aplicativo pode ser visualizados na figura a seguir:
