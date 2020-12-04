@@ -67,19 +67,19 @@ startEDM()
 Deverás abrir uma página em html no seu navegador padrão como sugere a figura a seguir:
 
 <!--![homeedm](https://github.com/ivanalaman/EDM/blob/master/inst/images/homeedm.png)-->
-<img src="../../images/homeedm.png" width="650" height="450" />
+<img src="http://nbcgib.uesc.br/lec/download/ivan/pacotes/EDM/imagens/homeedm.png" width="650" height="450" />
 
 Explore o aplicativo navegando nos diferentes __menus__. Gere uma prova no formato PDF para testar se os pré-requisitos foram bem instalados. Veja a figura a seguir:
 
-<img src="../../images/gerarpdf.png" width="650" height="450" />
+<img src="http://nbcgib.uesc.br/lec/download/ivan/pacotes/EDM/imagens/gerarpdf.png" width="650" height="450" />
 
 Se tudo ocorreu certo, deverá abrir um popup informando onde os arquivos foram salvos. 
 
-<img src="../../images/messagesavepdf.png" width="650" height="450" />
+<img src="http://nbcgib.uesc.br/lec/download/ivan/pacotes/EDM/imagens/messagesavepdf.png" width="650" height="450" />
 
 São criados dois arquivos. Um é referente ao gabarito e outro referente a prova. Por padrão, o arquivo é salvo dentro da pasta **EDM** criada no seu diretório de trabalho. No windows por exemplo, você encontrará a pasta no seguinte caminho: **C:\Usuários\Seunome\Documentos\EDM**. No linux o caminho seria: **/home/usuário/EDM**. 
 
-<img src="../../images/edmfolder.png" width="650" height="450" />
+<img src="http://nbcgib.uesc.br/lec/download/ivan/pacotes/EDM/imagens/edmfolder.png" width="650" height="450" />
 
 Se não consta na pasta nenhum arquivo, provavelmente ocorreu algum erro devido alguma instalação anterior.
 
@@ -90,7 +90,7 @@ Se ainda sim o problema persistir, não hesite em enviar um email para iballaman
 ## Criando um banco de questões
 Depois de ter explorado o aplicativo, chegou o momento de você criar o seu próprio banco de questões para utilizá-lo na elaboração de suas provas. A figura abaixo mostra o procedimento.
 
-<img src="../../images/criarbq.png" width="650" height="450" />
+<img src="http://nbcgib.uesc.br/lec/download/ivan/pacotes/EDM/imagens/criarbq.png" width="650" height="450" />
 
 <!--Caso prefira ver um vídeo, segue o link: https://em construção.-->
 
@@ -99,7 +99,7 @@ Após criar o banco de questões, siga as instruções que constam no repositór
 ## Programando questões
 O pacote EDM possui um menu específico para elaboração de questões, tanto interativo quanto não interativo. Para aqueles que não tem nenhuma familiaridade com códigos [LaTeX](https://www.latex-project.org/), poderá utilizar a interface interativa. Já aqueles que tem familiaridade com o [LaTeX](https://www.latex-project.org/), poderá utilizar o menu não interativo.
 
-<img src="../../images/pquestao.png" width="650" height="200" />
+<img src="http://nbcgib.uesc.br/lec/download/ivan/pacotes/EDM/imagens/pquestao.png" width="650" height="200" />
 
 ### Questão dissertativa do tipo texto
 Este tipo de questão tem apenas uma resposta que no caso é um texto. Recomenda-se que a resposta seja a mais objetiva possível. Vejamos um exemplo:
@@ -111,7 +111,7 @@ Este tipo de questão tem apenas uma resposta que no caso é um texto. Recomenda
 
 A elaboração do exemplo acima utilizando o aplicativo pode ser visualizados na figura a seguir:
 
-![](../../images/qtexto.png)
+![](http://nbcgib.uesc.br/lec/download/ivan/pacotes/EDM/imagens/qtexto.png)
 
 ### Questão dissertativa do tipo numérica
 A ideia é a mesma da questão dissertativa do tipo texto, porém, a resposta é do tipo numérica. Exemplo:
@@ -123,7 +123,7 @@ A ideia é a mesma da questão dissertativa do tipo texto, porém, a resposta é
 
 Perceba que o valor é único, sem texto algum. Caso seja um número decimal,então use ponto como unidade separadora da parte inteira da parte fracionária (2.25 por exemplo).
 
-![](../../images/qnum.png)
+![](http://nbcgib.uesc.br/lec/download/ivan/pacotes/EDM/imagens/qnum.png)
 
 ### Questão do tipo única escolha
 É conhecida também como questão **objetiva**, pois só há uma questão correta.
@@ -141,7 +141,7 @@ Exemplo:
   <p><i>Resposta: Alternativa a</i></p>
 </ol>
 
-![](../../images/quesco.png)
+![](http://nbcgib.uesc.br/lec/download/ivan/pacotes/EDM/imagens/quesco.png)
 
 ### Questão do tipo múltipla escolha
 Neste tipo de questão podemos ter mais de uma questão correta, todas corretas ou todas falsas. Conhecida também como questão do tipo **verdadeiro** ou **falso**.
@@ -167,7 +167,7 @@ Exemplo:
  </ol>
 </ol>
 
-![](../../images/qmesco.png)
+![](http://nbcgib.uesc.br/lec/download/ivan/pacotes/EDM/imagens/qmesco.png)
 
 ### Questão do tipo associativa
 O objetivo nesta questão é estabelecer uma relação entre duas listas.
@@ -199,7 +199,7 @@ Exemplo:
 <i>Resposta: 2</i>
 </ol>
 
-![](../../images/qasso.png)
+![](http://nbcgib.uesc.br/lec/download/ivan/pacotes/EDM/imagens/qasso.png)
 
 ### Questão do tipo mista
 Neste tipo de questão é possível misturar entre os tipos de questão já abordados anteriormente. No exemplo abaixo, temos duas alternativas, sendo uma do tipo **texto** e outra do tipo **numérica**.
@@ -215,22 +215,22 @@ Exemplo:
 </ol>
 </ol>
 
-![](../../images/qmista.png)
+![](http://nbcgib.uesc.br/lec/download/ivan/pacotes/EDM/imagens/qmista.png)
 
 ### Questão com figura
 Caso a questão tenha figura, é possível adicionar colocando o endereço completo de onde está a figura. Caso não saiba como copiar o endereço completo do arquivo, veja a figura abaixo.
 
-<img src="../../images/qfig0.png" width="700" height="200" />
+<img src="http://nbcgib.uesc.br/lec/download/ivan/pacotes/EDM/imagens/qfig0.png" width="700" height="200" />
 
 No caso do windows, você deve trocar o "&#92;" por "/" no endereço copiado da imagem anterior.
 
 Sugiro que crie uma pasta chamada "figuras" no mesmo diretório onde está o arquivo da questão. Veja a figura abaixo.
 
-![](../../images/qfig1.png)
+![](http://nbcgib.uesc.br/lec/download/ivan/pacotes/EDM/imagens/qfig1.png)
 
 A figura a seguir mostra a elaboração de uma questão do tipo texto com figura.
 
-![](../../images/qfig2.png)
+![](http://nbcgib.uesc.br/lec/download/ivan/pacotes/EDM/imagens/qfig2.png)
 
 
 ## Salvando as questões no diretório correto
