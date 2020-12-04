@@ -1,5 +1,26 @@
 # Exams Database Manager EDM
 
+<p align="center">
+  <span>English</span> |
+  <a href="https://github.com/ivanalaman/EDM/tree/master/inst/lang/portuguese_br">Portuguese-Brazil</a>
+</p>
+
+- [Introduction](https://github.com/ivanalaman/EDM#Introduction)
+- [Prerequisites for installing the EDM package](https://github.com/ivanalaman/EDM#Prerequisites-for-installing-the-EDM-package)
+- [Installation prerequisites to generate PDF proofs](https://github.com/ivanalaman/EDM#Installation-prerequisites-to-generate-PDF-proofs)
+- [Installation prerequisites for generating XML proofs](https://github.com/ivanalaman/EDM#Installation-prerequisites-for-generating-XML-proofs)
+- [Installation of the EDM package](https://github.com/ivanalaman/EDM#Installation-of-the-EDM-package)
+- [Using the EDM package](https://github.com/ivanalaman/EDM#Using-the-EDM-package)
+- [Creating a question bank](https://github.com/ivanalaman/EDM#Creating-a-question-bank)
+- [Programming question](https://github.com/ivanalaman/EDM#Programming-question)
+  - [Text type essay question](https://github.com/ivanalaman/EDM#Text-type-essay-question)
+  - [Numerical type essay question](https://github.com/ivanalaman/EDM#Numerical-type-essay-question)
+  - [Single choice question](https://github.com/ivanalaman/EDM#Single-choice-question)
+  - [Multiple choice question](https://github.com/ivanalaman/EDM#Multiple-choice-question)
+  - [Associative question](https://github.com/ivanalaman/EDM#Associative-question)
+- [Question with figure](https://github.com/ivanalaman/EDM#Question-with-figure)
+- [Saving the questions in the correct directory](https://github.com/ivanalaman/EDM#Saving-the questions-in-the-correct-directory)
+
 ## Introduction
 The EDM (Exams Database Manager) package was developed using the [shiny](https://cran.r-project.org/web/packages/shiny/index.html) package  of the software [R](https://www.r-project.org/). To learn more about package [shiny](https://cran.r-project.org/web/packages/shiny/index.html) visit the official page [https://shiny.rstudio.com/](https://shiny.rstudio.com/).
 
