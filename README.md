@@ -18,8 +18,9 @@
   - [Single choice question](https://github.com/ivanalaman/EDM#Single-choice-question)
   - [Multiple choice question](https://github.com/ivanalaman/EDM#Multiple-choice-question)
   - [Associative question](https://github.com/ivanalaman/EDM#Associative-question)
+  - []()
 - [Question with figure](https://github.com/ivanalaman/EDM#Question-with-figure)
-- [Saving the questions in the correct directory](https://github.com/ivanalaman/EDM#Saving-the questions-in-the-correct-directory)
+- [Saving the questions in the correct directory](https://github.com/ivanalaman/EDM#Saving-the-questions-in-the-correct-directory)
 
 ## Introduction
 The EDM (Exams Database Manager) package was developed using the [shiny](https://cran.r-project.org/web/packages/shiny/index.html) package  of the software [R](https://www.r-project.org/). To learn more about package [shiny](https://cran.r-project.org/web/packages/shiny/index.html) visit the official page [https://shiny.rstudio.com/](https://shiny.rstudio.com/).

@@ -72,3 +72,10 @@ observeEvent(input$downloadXML,{
   },
   contentType = "application/zip"
  )
+
+observeEvent(input$select_button, {
+ selectedRow <- as.numeric(strsplit(input$select_button, "_")[[1]][2])
+ exams2html(questions()[[selectedRow]],
+  encoding = "UTF-8")
+ })
+
