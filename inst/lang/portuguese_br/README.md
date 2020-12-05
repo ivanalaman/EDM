@@ -1,22 +1,21 @@
 # Gerenciador de banco de questões EDM
 
-- [Introdução](https://github.com/ivanalaman/EDM#Introduction)
-- [Pré-requisitos para instalação do pacote EDM](https://github.com/ivanalaman/EDM#Prerequisites-for-installing-the-EDM-package)
-- [Pré-requisitos de instalação para gerar as provas em PDF](https://github.com/ivanalaman/EDM#Installation-prerequisites-to-generate-PDF-proofs)
-- [Pré-requisitos de instalação para gerar as provas em XML](https://github.com/ivanalaman/EDM#Installation-prerequisites-for-generating-XML-proofs)
-- [Instalação do pacote EDM](https://github.com/ivanalaman/EDM#Installation-of-the-EDM-package)
-- [Utilizando o pacote EDM](https://github.com/ivanalaman/EDM#Using-the-EDM-package)
-- [Criando um banco de questões](https://github.com/ivanalaman/EDM#Creating-a-question-bank)
-- [Programando questões](https://github.com/ivanalaman/EDM#Programming-question)
-  - [Questão dissertativa do tipo texto](https://github.com/ivanalaman/EDM#Text-type-essay-question)
-  - [Questão dissertativa do tipo numérica](https://github.com/ivanalaman/EDM#Numerical-type-essay-question)
-  - [Questão do tipo única escolha](https://github.com/ivanalaman/EDM#Single-choice-question)
-  - [Questão do tipo múltipla escolha](https://github.com/ivanalaman/EDM#Multiple-choice-question)
-  - [Questão do tipo associativa](https://github.com/ivanalaman/EDM#Associative-question)
-  - [Questão do tipo mista](https://github.com/ivanalaman/EDM#Associative-question)
-- [Questão com figura](https://github.com/ivanalaman/EDM#Question-with-figure)
-- [Salvando as questões no diretório correto](https://github.com/ivanalaman/EDM#Saving-the-questions-in-the-correct-directory)
-
+- [Introdução](https://github.com/ivanalaman/EDM/blob/master/inst/lang/portuguese_br#Introdução)
+- [Pré-requisitos para instalação do pacote EDM](https://github.com/ivanalaman/EDM/blob/master/inst/lang/portuguese_br#Pré-requisitos-para-instalação-do-pacote-EDM)
+- [Pré-requisitos de instalação para gerar as provas em PDF](https://github.com/ivanalaman/EDM/blob/master/inst/lang/portuguese_br#Pré-requisitos-de-instalação-para-gerar-as-provas-em-PDF)
+- [Pré-requisitos de instalação para gerar as provas em XML](https://github.com/ivanalaman/EDM/blob/master/inst/lang/portuguese_br#Pré-requisitos-de-instalação-para-gerar-as-provas-em-XML)
+- [Instalação do pacote EDM](https://github.com/ivanalaman/EDM/blob/master/inst/lang/portuguese_br#Instalação-do-pacote-EDM)
+- [Utilizando o pacote EDM](https://github.com/ivanalaman/EDM/blob/master/inst/lang/portuguese_br#Utilizando-o-pacote-EDM)
+- [Criando um banco de questões](https://github.com/ivanalaman/EDM/blob/master/inst/lang/portuguese_br#Criando-um-banco-de-questões)
+- [Programando questões](https://github.com/ivanalaman/EDM/blob/master/inst/lang/portuguese_br#Programando-questões)
+  - [Questão dissertativa do tipo texto](https://github.com/ivanalaman/EDM/blob/master/inst/lang/portuguese_br#Questão-dissertativa-do-tipo-texto)
+  - [Questão dissertativa do tipo numérica](https://github.com/ivanalaman/EDM/blob/master/inst/lang/portuguese_br#Questão-dissertativa-do-tipo-numérica)
+  - [Questão do tipo única escolha](https://github.com/ivanalaman/EDM/blob/master/inst/lang/portuguese_br#Questão-do-tipo-única-escolha)
+  - [Questão do tipo múltipla escolha](https://github.com/ivanalaman/EDM/blob/master/inst/lang/portuguese_br#Questão-do-tipo-múltipla-escolha)
+  - [Questão do tipo associativa](https://github.com/ivanalaman/EDM/blob/master/inst/lang/portuguese_br#Questão-do-tipo-associativa)
+  - [Questão do tipo mista](https://github.com/ivanalaman/EDM/blob/master/inst/lang/portuguese_br#Questão-do-tipo-mista)
+- [Questão com figura](https://github.com/ivanalaman/EDM/blob/master/inst/lang/portuguese_br#Questão-com-figura)
+- [Salvando as questões no diretório correto](https://github.com/ivanalaman/EDM/blob/master/inst/lang/portuguese_br#Salvando-as-questões-no-diretório-correto)
 
 ## Introdução
 O pacote EDM (Exams Database Manager) foi elaborado utilizando o pacote [shiny](https://cran.r-project.org/web/packages/shiny/index.html) do software [R](https://www.r-project.org/). Para conhecer melhor o pacote [shiny](https://cran.r-project.org/web/packages/shiny/index.html) visite a página oficial [https://shiny.rstudio.com/](https://shiny.rstudio.com/). 
