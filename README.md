@@ -88,19 +88,19 @@ startEDM()
 ```
 You should open a page in html in your default browser as suggested in the following figure:
 
-<img src = "http://nbcgib.uesc.br/lec/download/ivan/pacotes/EDM/imagens/homeedm.png" width = "650" height = "450"​​/>
+<img src = "http://nbcgib.uesc.br/lec/download/ivan/pacotes/EDM/imagens/homeedm.png" width = "650" height = "450" />
 
 Explore the app by browsing the different __menus__. Generate a test in PDF format to test whether the prerequisites have been successfully installed. Look the following picture:
 
-<img src = "http://nbcgib.uesc.br/lec/download/ivan/pacotes/EDM/imagens/gerarpdf.png" width = "650" height = "450"​​/>
+<img src = "http://nbcgib.uesc.br/lec/download/ivan/pacotes/EDM/imagens/gerarpdf.png" width = "650" height = "450" />
 
 If everything went well, you should open a popup informing you where the files were saved.
 
-<img src = "http://nbcgib.uesc.br/lec/download/ivan/pacotes/EDM/imagens/messagesavepdf.png" width = "650" height = "450"​​/>
+<img src = "http://nbcgib.uesc.br/lec/download/ivan/pacotes/EDM/imagens/messagesavepdf.png" width = "650" height = "450" />
 
 Two files are created. One is for feedback and the other for proof. By default, the file is saved inside the **EDM** folder created in your working directory. In windows for example, you will find the folder in the following path: **C:\Users\Yourname\Documents\EDM**. In Linux the path would be: **/home/user/EDM**.
 
-<img src = "http://nbcgib.uesc.br/lec/download/ivan/pacotes/EDM/imagens/edmfolder.png" width = "650" height = "450"​​/>
+<img src = "http://nbcgib.uesc.br/lec/download/ivan/pacotes/EDM/imagens/edmfolder.png" width = "650" height = "400" />
 
 If there is no file in the folder, an error probably occurred due to a previous installation.
 
@@ -111,7 +111,7 @@ If the problem still persists, do not hesitate to send an email to iballaman@ues
 ## Creating a question bank
 After you have explored the application, the time has come for you to create your own question bank to use it in preparing your exams. The figure below shows the procedure.
 
-<img src = "http://nbcgib.uesc.br/lec/download/ivan/pacotes/EDM/imagens/criarbq.png" width = "650" height = "450"​​ />
+<img src = "http://nbcgib.uesc.br/lec/download/ivan/pacotes/EDM/imagens/criarbq.png" width = "650" height = "400" />
 
 After creating the question bank, follow the instructions in the [questionbankEDM](https://github.com/ivanalaman/questionbankEDM#Building-the-question-bank) repository from github.
 
