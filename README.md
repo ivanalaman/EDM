@@ -111,7 +111,7 @@ If the problem still persists, do not hesitate to send an email to iballaman@ues
 ## Creating a question bank
 After you have explored the application, the time has come for you to create your own question bank to use it in preparing your exams. The figure below shows the procedure.
 
-<img src = "http://nbcgib.uesc.br/lec/download/ivan/pacotes/EDM/imagens/criarbq.png" width = "650" height = "450"​​/>
+<img src = "http://nbcgib.uesc.br/lec/download/ivan/pacotes/EDM/imagens/criarbq.png" width = "650" height = "450"​​ />
 
 After creating the question bank, follow the instructions in the [questionbankEDM](https://github.com/ivanalaman/questionbankEDM#Building-the-question-bank) repository from github.
 
