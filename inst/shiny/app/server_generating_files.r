@@ -75,7 +75,8 @@ observeEvent(input$downloadXML,{
 
 observeEvent(input$select_button, {
  #print(see_questions()[[selectedRow]])
- exams2html(see_questions())
+ exams2html(see_questions(),
+ encoding = 'UTF-8')
  })
 
 
