@@ -23,9 +23,11 @@ dad_acz <- reactive({
   }
   inputs
  }
+ #  
  #  dad <- data.frame(paste('<a href="file:///',path,aux_1,'">',dados[,5],"</a>",sep=''),
  #                    dados[,1:4],
  #                    aa)
+ 
  dad <- data.frame(dados[,5],
   dados[,1:4],
   aa,
@@ -35,20 +37,21 @@ dad_acz <- reactive({
    icon=icon('glasses'),
    label = "", 
    onclick = 'Shiny.onInputChange(\"select_button\",  this.id)' ))
-
+  
  names(dad) <- c(tr("narqui"),tr("disci"),tr("assun"),tr("ntipo"),tr("nnivel"),'',tr("visu"))
  dad
 
 })
 
-action_acz <- DT::dataTableAjax(session, dad_acz(), rownames = TRUE)
+#action_acz <- DT::dataTableAjax(session, dad_acz(), rownames = TRUE)
 
 output$questions_acz <- DT::renderDataTable({
  DT::datatable(
   dad_acz()[,-6],
   rownames = TRUE,
-  escape = FALSE,
-  options = list(
-   ajax = list(url = action_acz)
-   ))
+  escape = FALSE
+  #   options = list(
+  #    ajax = list(url = action_acz)
+  #    )
+ )
 },server=FALSE)

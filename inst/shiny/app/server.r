@@ -52,6 +52,10 @@ shinyServer(function(input,output,session){
  
  source("server_final_questions.r",local = TRUE)$value
 
+ #+++++++++++++ Visualizing questions ++++++++++++++#
+
+ source("server_visualize_questions.r",local = TRUE)$value
+ 
  #+++++++++++++              Gerando os arquivos                +++++++++++++++#
 
  source("server_generating_files.r",local = TRUE)$value 
