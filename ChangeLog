@@ -2,6 +2,7 @@
   * Elaborated a Readme file more informative.
   * Added functionality to view the file in the question manager panel.
   * Removed the link to the files in the question manager panel.
+  * Added new imports packages: rmarkdown and tth.
 
 2020-10-03 vs. 1.0-63 - Ivan Bezerra Allaman <ivanalaman@gmail.com>
   * Fixed bug with update interface.

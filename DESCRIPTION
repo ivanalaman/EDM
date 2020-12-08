@@ -8,4 +8,5 @@ Description: Interactive shiny application for working with exames database mana
 License: GPL (>= 2)
 Depends: R (>= 3.0.3), shiny (>= 1.0.3), exams
 Imports: readr, DT (>= 0.2), shinyjs, markdown
+Suggests: rmarkdown, tth
 NeedsCompilation: no
