@@ -65,10 +65,6 @@
     size='m'
     )) 
 
-  observeEvent(input$closecreatecc,{
-   stopApp()
-   })
- 
  })
 
  subsubdirs <- reactive({
@@ -149,9 +145,4 @@
      ),
     size='m'
     )) 
-
-  observeEvent(input$closecreatecm,{
-   stopApp()
-   })
-
  })

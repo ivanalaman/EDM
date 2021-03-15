@@ -13,7 +13,8 @@ tabPanel(uiOutput("utbanco"),
     value=1),
    helpText(h4(uiOutput("esbanqu"))),
 
-   source('../../aux_files/widgets/current/widgets.r',local=TRUE)$value
+   #source('../../aux_files/widgets/current/widgets.r',local=TRUE)$value
+   uiOutput("framebd")
 
    ),
 

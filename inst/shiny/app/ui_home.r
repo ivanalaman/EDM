@@ -1,4 +1,5 @@
-tabPanel(uiOutput("ini"),
+tabPanel(icon("home"),
+ #uiOutput("ini"),
   h1(uiOutput("sigla"), 
   span(uiOutput("titulo"), 
    style = "font-weight: 300"), 

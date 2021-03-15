@@ -1,3 +1,8 @@
+2021-01-29 vs. 1.1-0  - Ivan Bezerra Allaman <ivanalaman@gmail.com>
+  * Update app automatically without to close app after to create database, matters, etc.
+  * Add to the menu a button to stop and refresh app.
+  * Substituted the work "Home" in menu by "icon".
+
 2020-12-05 vs. 1.0-64 - Ivan Bezerra Allaman <ivanalaman@gmail.com>
   * Elaborated a Readme file more informative.
   * Added functionality to view the file in the question manager panel.

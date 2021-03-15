@@ -52,10 +52,7 @@ shinyServer(function(input,output,session){
  
  source("server_final_questions.r",local = TRUE)$value
 
- #+++++++++++++ Visualizing questions ++++++++++++++#
 
- source("server_visualize_questions.r",local = TRUE)$value
- 
  #+++++++++++++              Gerando os arquivos                +++++++++++++++#
 
  source("server_generating_files.r",local = TRUE)$value 
@@ -99,13 +96,52 @@ shinyServer(function(input,output,session){
  #+++++++++++++                    Update App                  +++++++++++++++#
 
  source("server_update_app.r",local=TRUE)$value
- 
- session$onSessionEnded(function() {
-  options(warn = 0)
-  stopApp()
+
+ #+++++++++++++              Frame Exams Data Base             +++++++++++++++#
+ output$framebd <- renderUI({
+  source('../../aux_files/widgets/current/widgets.r',local=TRUE)$value
  })
 
+ observeEvent(input$closecreatebd,{
+  session$reload()
+ })
+ 
+ observeEvent(input$closeremovebd,{
+ session$reload()
+ })
+
+ observeEvent(input$closecreatecc,{
+ session$reload()
+ })
+
+ observeEvent(input$closecreatecm,{
+ session$reload()
+ })
+
+ #+++++++++++++           Stop Session to close webpage        +++++++++++++++#
+ observe({
+  if(input$navbar=="closeapp"){
+ options(warn = 0)
+  stopApp()
+  }
+ })
+ 
+ #+++++++++++++           Refresh Session to update webpage        +++++++++++++++#
+ observe({
+  if(input$navbar=="refreshapp"){
+ options(warn = 0)
+  session$reload()
+  }
+ })
+
+
+
+ #  session$onSessionEnded(function() {
+ #   options(warn = 0)
+ #   stopApp()
+ #  })
+
  ## Debugin app!!
- #output$test <- renderText({ dim(questions())})#é um character!!
+ #output$teste <- renderPrint({expdf()})#é um character!!
  #output$coco <- renderText({subsubdirs()})  
 })

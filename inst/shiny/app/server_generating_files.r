@@ -12,12 +12,12 @@ ostype <- reactive({
   ost <- "\\EDM")
 })
 
-
+#expdf <- eventReactive(input$downloadPDF,{
 observeEvent(input$downloadPDF,{ 
- withProgress(min=0,max=30,{
+ withProgress(message = tr("mgerfiles"),min=0,max=30,{
   Sys.sleep(1)
 
-  exams2pdf(questions(),
+ res <- try(exams2pdf(questions(),
    n = input$numquestion,
    template = c('../../template/avaliacao.tex',
     '../../template/solucao.tex'),
@@ -30,16 +30,25 @@ observeEvent(input$downloadPDF,{
      "carg.tex",
      "anol.tex",
      "nome.tex")),
-   encoding = "UTF-8")
+   encoding = "UTF-8"),silent = TRUE)
 
+  if("try-error"%in% class(res)){
+   showModal(modalDialog(
+     title = uiOutput("tirefreshapp"),
+     paste0(tr("merrorpdf1"),attr(res,"condition")[[1]],".",tr("merrorpdf2")),
+     footer = modalButton("OK!"),
+     size='m'
+     )) 
+  }else{
   showModal(modalDialog(
     title = uiOutput("tirefreshapp"),
     paste0(tr("meresavedfiles"),' ',Sys.getenv("HOME"),ostype()),
     footer = modalButton("OK!"),
     size='m'
     )) 
-   })
- })
+  }
+  })
+})
 
 observeEvent(input$downloadXML,{ 
  withProgress(min=0,max=30,{
@@ -75,6 +84,9 @@ observeEvent(input$downloadXML,{
 
 observeEvent(input$select_button, {
  #print(see_questions()[[selectedRow]])
+ #+++++++++++++ Visualizing questions ++++++++++++++#
+ source("server_visualize_questions.r",local = TRUE)$value
+ 
  exams2html(see_questions(),
  encoding = 'UTF-8')
  })

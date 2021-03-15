@@ -2,7 +2,7 @@ tr <- function(text){ # translates text into current language
   sapply(text,function(s) translation[[s]][[input$language]], USE.NAMES=FALSE)
 }
 
-output$ini           <- renderText({ tr("inicio")    })
+#output$ini           <- renderText({ tr("inicio")    })
 output$sigla         <- renderText({ tr("gbq")       })
 output$titulo        <- renderText({ tr("titulo")    })
 output$saudacao      <- renderText({ tr("saudacao")  })
@@ -116,4 +116,10 @@ output$mgatuaapp     <- renderText({ tr("mgatuaapp")    })
 output$tirefreshapp  <- renderText({ tr("tirefreshapp") })
 output$merefreshapp  <- renderText({ tr("merefreshapp") })
 output$meresavedfiles<- renderText({ tr("meresavedfiles")})
-output$visu          <- renderText({ tr("visu")          })
+output$visu          <- renderText({ tr("visu")         })
+output$merrorpdf1    <- renderText({ tr("merrorpdf1")   })
+output$merrorpdf2    <- renderText({ tr("merrorpdf2")   })
+output$bstop         <- renderText({ tr("bstop")        })
+output$brefresh      <- renderText({ tr("brefresh")     })
+output$mgerfiles     <- renderText({ tr("mgerfiles")    })
+

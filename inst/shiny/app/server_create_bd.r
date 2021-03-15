@@ -179,9 +179,9 @@ observeEvent(input$gerarb, {
      size='m'
      )) 
 
-   observeEvent(input$closecreatebd,{
-    stopApp()
-   })
+   #    observeEvent(input$closecreatebd,{
+   #     stopApp()
+   #    })
 
   })
  }

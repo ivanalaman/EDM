@@ -150,9 +150,9 @@ observeEvent(input$removerb, {
     size='m'
     )) 
 
-  observeEvent(input$closeremovebd,{
-   stopApp()
-   })
+  #   observeEvent(input$closeremovebd,{
+  #    stopApp()
+  #    })
 
 })
 })
