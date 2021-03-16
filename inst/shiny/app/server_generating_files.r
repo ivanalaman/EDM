@@ -83,12 +83,21 @@ observeEvent(input$downloadXML,{
  )
 
 observeEvent(input$select_button, {
- #print(see_questions()[[selectedRow]])
- #+++++++++++++ Visualizing questions ++++++++++++++#
- source("server_visualize_questions.r",local = TRUE)$value
- 
- exams2html(see_questions(),
- encoding = 'UTF-8')
+               #print(see_questions()[[selectedRow]])
+               #+++++++++++++ Visualizing questions ++++++++++++++#
+               source("server_visualize_questions.r",local = TRUE)$value
+
+               res <- try(exams2html(see_questions(),
+                                     encoding = 'UTF-8'),silent=TRUE)
+
+               if("try-error"%in% class(res)){
+                 showModal(modalDialog(
+                                       title = uiOutput("tirefreshapp"),
+                                       paste0(tr("merrorhtml1"),attr(res,"condition")[[1]],".",tr("merrorpdf2")),
+                                       footer = modalButton("OK!"),
+                                       size='m'
+                                       )) 
+               }
  })
 
 
