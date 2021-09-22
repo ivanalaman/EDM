@@ -44,7 +44,7 @@ shinyServer(function(input,output,session){
 
  isolate({
 
-  source('../../aux_files/widgets/current/question_teacher.r',local=T)
+  source('../../aux_files/widgets/current/question_teacher.r',local = TRUE)
 
  })
 
